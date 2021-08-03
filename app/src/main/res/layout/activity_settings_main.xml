@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:textAlignment="viewStart"
+    tools:context=".SettingsActivity">
+
+    <Button
+        android:id="@+id/toolbar_button_left"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/toolbar_button_middle"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toolbar_button_collection" />
+
+    <Button
+        android:id="@+id/toolbar_button_right"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/toolbar_button_settings"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:scaleType="fitXY"
+        android:scaleX="0.25"
+        android:scaleY="1"
+        android:src="@drawable/ic_settings_filled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/toolbar_button_home"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:scaleType="fitXY"
+        android:scaleX="0.25"
+        android:scaleY="1"
+        android:src="@drawable/home_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toolbar_button_collection" />
+
+    <ImageButton
+        android:id="@+id/toolbar_button_collection"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
+        android:background="@color/purple_dark"
+        android:backgroundTint="#009000FF"
+        android:contentDescription="@string/desc"
+        android:scaleType="fitXY"
+        android:scaleX="0.2"
+        android:scaleY="0.5"
+        android:src="@drawable/collection_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnBack_Settings"
+        style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/settings_header"
+        android:layout_width="127dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/desc"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:text="@string/settings"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/settings_profile"
+        app:layout_constraintStart_toEndOf="@+id/btnBack_Settings"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/settings_profile"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/purple_dark"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:scaleY="1"
+        android:text="@string/profile"
+        app:icon="@drawable/profile_icon"
+        app:iconGravity="start"
+        app:iconPadding="2dp"
+        app:iconSize="45dp"
+        app:iconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/settings_theme"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:background="@color/purple_dark"
+        android:text="@string/theme"
+        android:textAlignment="center"
+        app:icon="@drawable/theme_icon"
+        app:iconGravity="start"
+        app:iconPadding="2dp"
+        app:iconSize="45dp"
+        app:iconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_profile"
+        app:strokeColor="@color/black" />
+
+    <Button
+        android:id="@+id/settings_dark_mode"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:background="@color/purple_dark"
+        android:backgroundTint="@color/purple_dark"
+        android:backgroundTintMode="add"
+        android:text="@string/dark_mode"
+        app:icon="@drawable/brightness"
+        app:iconGravity="start"
+        app:iconSize="45dp"
+        app:iconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_theme" />
+
+    <Button
+        android:id="@+id/log_out"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#0000FF"
+        android:text="@string/logout"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_button_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/about_header"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:text="@string/about"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_dark_mode" />
+
+    <TextView
+        android:id="@+id/version_header"
+        android:layout_width="413dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/version_header"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_header" />
+
+    <TextView
+        android:id="@+id/version_type"
+        android:layout_width="412dp"
+        android:layout_height="23dp"
+        android:text="@string/version_num"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/version_header" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/black"
+        android:checked="true"
+        app:layout_constraintBottom_toTopOf="@+id/about_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_theme"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

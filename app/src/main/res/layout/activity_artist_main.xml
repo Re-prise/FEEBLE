@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ArtistRecommendedActivity">
+
+    <ImageView
+        android:id="@+id/cover_artist_ArtistCover"
+        android:layout_width="413dp"
+        android:layout_height="354dp"
+        android:layout_marginBottom="350dp"
+        android:contentDescription="@string/desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/artist_cover_jj" />
+
+    <ImageButton
+        android:id="@+id/btnBack_artist"
+        style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="350dp"
+        android:layout_marginBottom="350dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtView_artist_ArtistName"
+        android:layout_width="412dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/dark_blue"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:text="JJ Lin"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cover_artist_ArtistCover"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_artist_song1"
+        android:layout_width="408dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#00000000"
+        android:onClick="handleSelection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_artist_ArtistName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/cover_artist_song1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_artist_song1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_artist_song1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_artist_song1"
+        app:layout_constraintTop_toTopOf="@+id/txtView_artist_ArtistName"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/jj_lin_dang_ni" />
+
+    <TextView
+        android:id="@+id/txtView_artist_Song1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="22dp"
+        android:text="当你"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_artist_song1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cover_artist_song1"
+        app:layout_constraintTop_toTopOf="@+id/txtView_artist_ArtistName"
+        app:layout_constraintVertical_bias="0.971" />
+
+    <TextView
+        android:id="@+id/txtView_artist_Song1Duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="15dp"
+        android:text="4min 15secs"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_artist_song1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_artist_song1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_artist_song1"
+        app:layout_constraintTop_toTopOf="@+id/btn_artist_song1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/btnMore_artist"
+        android:layout_width="50dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_artist_song1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_artist_ArtistName"
+        app:layout_constraintVertical_bias="0.014"
+        app:srcCompat="@drawable/more_options_button" />
+
+    <TextView
+        android:id="@+id/txtView_artist_AlbumName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="她说"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_artist_ArtistName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="410dp"
+        android:layout_height="318dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_artist_ArtistName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

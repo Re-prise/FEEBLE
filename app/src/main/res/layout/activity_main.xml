@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:foregroundTint="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/recommend_song_cover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="350dp"
+        android:layout_marginBottom="94dp"
+        android:contentDescription="@string/desc"
+        app:layout_constraintBottom_toTopOf="@+id/Header_Main_Artists"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Songs"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/li_kai_ni_yi_hou" />
+
+    <Button
+        android:id="@+id/recommended_song"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="411dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="94dp"
+        android:background="#00000000"
+        android:backgroundTint="#00000000"
+        android:onClick="goToPlaySong"
+        app:layout_constraintBottom_toTopOf="@+id/Header_Main_Artists"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Songs"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Header_Main_Your_Playlists"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple_dark"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        android:textColorLink="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchView"
+        tools:text="Your Playlists" />
+
+    <SearchView
+        android:id="@+id/SearchView"
+        android:layout_width="410dp"
+        android:layout_height="47dp"
+        android:background="#85FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/Toolbar_button_right"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Toolbar_button_middle" />
+
+    <Button
+        android:id="@+id/Toolbar_button_middle"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Toolbar_button_left" />
+
+    <Button
+        android:id="@+id/Toolbar_button_left"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Playlist_button_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Your_Playlists"
+        tools:src="@tools:sample/backgrounds/scenic[2]" />
+
+    <TextView
+        android:id="@+id/Header_Main_Artists"
+        android:layout_width="411dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginBottom="193dp"
+        android:background="@color/purple_dark"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/Toolbar_button_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Songs"
+        tools:text="Artists You May Like" />
+
+    <TextView
+        android:id="@+id/PlaylistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="9dp"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/Playlist_button_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Playlist_button_1"
+        tools:text="Playlist Name" />
+
+    <TextView
+        android:id="@+id/ByLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/Playlist_button_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlaylistName"
+        tools:text="By:" />
+
+    <Button
+        android:id="@+id/playlist_button"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="101dp"
+        android:layout_height="145dp"
+        android:layout_marginEnd="350dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/Header_Main_Songs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Your_Playlists" />
+
+    <TextView
+        android:id="@+id/Header_Main_Songs"
+        android:layout_width="411dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="198dp"
+        android:background="@color/purple_dark"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Header_Main_Your_Playlists"
+        tools:text="Songs You May Like" />
+
+    <ImageButton
+        android:id="@+id/Toolbar_button_collection"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="194dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:scaleType="fitXY"
+        android:scaleX="0.2"
+        android:scaleY="0.5"
+        android:src="@drawable/collection_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Toolbar_button_middle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/Toolbar_button_home"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="387dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:scaleType="fitXY"
+        android:scaleX="0.25"
+        android:scaleY="1"
+        android:src="@drawable/ic_home_filled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Toolbar_button_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Toolbar_button_collection"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Songs"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/Toolbar_button_settings"
+        android:layout_width="134dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="194dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:onClick="goToSettings"
+        android:scaleType="fitXY"
+        android:scaleX="0.25"
+        android:scaleY="1"
+        android:src="@drawable/settings_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/artist_recommended_image"
+        style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:scaleType="fitXY"
+        android:scaleX="1.25"
+        android:scaleY="1.25"
+        android:src="@drawable/artist_cover_jjlin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists" />
+
+    <TextView
+        android:id="@+id/artist_recommended_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/artist_recommeded"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/artist_recommeded_button"
+        app:layout_constraintStart_toStartOf="@+id/artist_recommeded_button"
+        app:layout_constraintTop_toBottomOf="@+id/artist_recommended_image" />
+
+    <Button
+        android:id="@+id/artist_recommeded_button"
+        android:layout_width="102dp"
+        android:layout_height="121dp"
+        android:layout_marginEnd="350dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#00FFFFFF"
+        android:clickable="true"
+        android:onClick="goToArtist"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/recommend_song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="350dp"
+        android:layout_marginBottom="29dp"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:text="离开你以后"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/recommended_song"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toEndOf="@+id/recommend_song_cover"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Songs" />
+
+    <TextView
+        android:id="@+id/recommend_artist_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:text="By: Eric Chou"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recommended_song"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Songs"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

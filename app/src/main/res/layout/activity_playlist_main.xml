@@ -11,51 +11,61 @@
         android:id="@+id/toolbar_button_right3"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="136dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="@color/purple_dark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/toolbar_button_middle3"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
         android:background="@color/purple_dark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Toolbar_button_left" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/toolbar_button_left3"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="136dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="140dp"
+        android:layout_width="139dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="136dp"
         android:background="@color/purple_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/toolbar_button_settings3"
-        android:layout_width="134dp"
-        android:layout_height="48dp"
+        android:id="@+id/toolbar_button_settings_playlist"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
         android:layout_marginTop="194dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
         android:onClick="rocketjumpToSettings"
         android:scaleType="fitXY"
         android:scaleX="0.25"
-        android:scaleY="1"
+        android:scaleY="0.9"
         android:src="@drawable/settings_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
-        android:id="@+id/toolbar_button_collection3"
+        android:id="@+id/toolbar_button_collections_playlist"
         android:layout_width="136dp"
-        android:layout_height="48dp"
+        android:layout_height="50dp"
         android:layout_marginTop="194dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/desc"
@@ -65,31 +75,35 @@
         android:scaleY="0.5"
         android:src="@drawable/collection_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Toolbar_button_middle"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar_button_right3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
-        android:id="@+id/toolbar_button_home3"
-        android:layout_width="141dp"
-        android:layout_height="48dp"
+        android:id="@+id/toolbar_button_home_playlist"
+        android:layout_width="139dp"
+        android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
         android:onClick="rocketjumpToHome"
-        android:scaleType="fitXY"
-        android:scaleX="0.25"
-        android:scaleY="1"
+        android:scaleType="fitCenter"
         android:src="@drawable/home_icon"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="821dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_button_left3"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar_button_right3"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imgbtn_playlist_back"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:onClick="rocketjump_back"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,9 +114,10 @@
         app:srcCompat="@drawable/back_icon" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/coverimg_playlist"
         android:layout_width="350dp"
         android:layout_height="350dp"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,7 +125,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096"
-        app:srcCompat="@drawable/ic_laucher" />
+        app:srcCompat="@drawable/playlist_cover_img" />
 
     <TextView
         android:id="@+id/textView"
@@ -118,7 +133,7 @@
         android:layout_height="48dp"
         android:background="@color/purple_dark"
         android:fontFamily="@font/theoneilluseveryoften"
-        android:text="My Playlist"
+        android:text="@string/myPlaylistHeader"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
@@ -143,6 +158,7 @@
         android:id="@+id/cover_palylist_song"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -157,7 +173,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/theoneilluseveryoften"
-        android:text="雾里"
+        android:text="@string/collections_favourited_song"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -171,7 +187,7 @@
         android:id="@+id/txt_playlist_artist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="姚六一"
+        android:text="@string/collections_favourited_artist"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -185,6 +201,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_hearts_filled"
         app:layout_constraintBottom_toBottomOf="parent"

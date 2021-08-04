@@ -7,7 +7,7 @@
     <string name="version_num">1.00</string>
     //version related//
 
-    //This chunk of strings are just so i dont have to hard code them. I could, but this is easier//
+    //This chunk of strings are just so i dont have to hard code them. I could, but this makes it neater
     <string name="dark_mode">Dark Mode</string>
     <string name="theme">Theme</string>
     <string name="profile">Profile</string>
@@ -25,4 +25,21 @@
     <string name="login_failed">"Login failed"</string>
     <string name="login">Log In</string>
     <string name="donthaveaccount">Dont have an account? Sign Up</string>
+    <string name="myPlaylistHeader">My Playlist</string>
+    <string name="songsYouMayLikeHeader">Songs You May Like</string>
+    <string name="mainSong">离开你以后</string>
+    <string name="byLine">By: Eric Chou</string>
+    <string name="artist_artist">JJ Lin</string>
+    <string name="artist_song_name">当你</string>
+    <string name="artist_song_duration">4min 15secs</string>
+    <string name="artist_album">|她说|</string>
+    <string name="yourPlaylist">Your Playlists</string>
+    <string name="favouritedSongs">Favourited Songs</string>
+    <string name="collections_favourited_song">雾里</string>
+    <string name="collections_favourited_artist">姚六一</string>
+    <string name="collectionsHeader">Collections</string>
+    <string name="artistsYouMayLike">Artist You May Like</string>
+    <string name="defaulttime">0.00</string>
+    <string name="artist_song_duration_num">4.15</string>
+    <string name="sampletext">Sample</string>
 </resources>

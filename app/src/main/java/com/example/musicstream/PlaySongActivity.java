@@ -1,5 +1,6 @@
 package com.example.musicstream;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 //import android.os.Handler;//
@@ -19,6 +20,7 @@ import java.util.List;
 
 
 //TODO: for playlist songs
+//TODO: add seekbar for songs
 
 public class PlaySongActivity extends AppCompatActivity {
     private String title = "";
@@ -63,10 +65,6 @@ public class PlaySongActivity extends AppCompatActivity {
         Log.d("temasek", "My file link is: " + fileLink);
     }
 
-    public void bacK(View view){
-        finish();
-    }
-
     //Runnable songbar = () -> Log.d("temasek","running");//
     public void displaySongBasedOnIndex(int currentIndex) {
         SongCollection SC = new SongCollection();
@@ -88,6 +86,7 @@ public class PlaySongActivity extends AppCompatActivity {
         playSong(fileLink);
     }
 
+    //to play song
     public void playSong(String songUrl){
         try{
             songplayer.reset();
@@ -103,12 +102,16 @@ public class PlaySongActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    //to skip to prev song.
     public void playPrev (View view){
         currentIndex = songCollection.getPrevSong(currentIndex);
-        Log.d("temasek","After playPrevious, the index is now :" + currentIndex);
+        //tester//Log.d("temasek","After playPrevious, the index is now :" + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(fileLink);
     }
+
+    //to play or pause music. Changes play/pause buttons
     public void playOrPauseMusic(View view){
         if (!songplayer.isPlaying()) {
             songplayer.start();
@@ -121,17 +124,23 @@ public class PlaySongActivity extends AppCompatActivity {
             songplayer.pause();
             play_button.setImageResource(R.drawable.play_arrow); }
     }
+
+    //to skip to next song.
     public void playNext (View view) {
         currentIndex = songCollection.getNextSong(currentIndex);
-        Log.d("temasek","After playNexy, the index is now :" + currentIndex);
+        //tester//Log.d("temasek","After playNexy, the index is now :" + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(fileLink);
     }
+
+    //for back button on press
     @Override
     public void onBackPressed(){
         super.onBackPressed();
         songplayer.release();
     }
+
+    //for when music ends. Sets to loop if loop(repeat flag) is turned on.
     private void gracefullyStopsWhenMusicEnds() {
         songplayer.setOnCompletionListener(mp -> {
             if (repeatFlag){
@@ -142,6 +151,7 @@ public class PlaySongActivity extends AppCompatActivity {
         });
     }
 
+    //toggles loop icon from on/off
     public void loopSong(View view) {
         if (repeatFlag){
             loopbtn.setImageResource(R.drawable.repeat_icon);
@@ -150,6 +160,8 @@ public class PlaySongActivity extends AppCompatActivity {
         }
         repeatFlag = !repeatFlag;
     }
+
+    //toggles shuffle icon from on/off. Also produces shuffled list.
     public void shuffleSong(View view) {
         if (shuffleFlag){
             shufflebtn.setImageResource(R.drawable.shuffle_icon);
@@ -158,11 +170,22 @@ public class PlaySongActivity extends AppCompatActivity {
             shufflebtn.setImageResource(R.drawable.shuffle_icon_filled);
             Collections.shuffle(shuffleList);
             for (int i = 0; i < shuffleList.size(); i++) {
-                Log.d("shuffle", shuffleList.get(i).getTitle());
+                //tester//Log.d("shuffle", shuffleList.get(i).getTitle());
                 shuffleList.toArray(songCollection.songs);
             }
         }
         shuffleFlag = !shuffleFlag;
+    }
+    //onClick function for Toolbar + back button
+    //onClick from Toolbar(home) to Main Activity
+    public void teleportToHome(View view){startActivity(new Intent(PlaySongActivity.this,MainActivity.class));}
+    //onClick from Toolbar(settings) to Settings Activity
+    public void teleportToSettings(View view){startActivity(new Intent(PlaySongActivity.this,SettingsActivity.class));}
+    //onClick from Toolbar(collections) to Collections Activity
+    public void teleportToCollections(View view){startActivity(new Intent(PlaySongActivity.this,CollectionsActivity.class));}
+    //onClick from Back button to finish current Activity
+    public void bacK(View view){
+        finish();
     }
 }
 

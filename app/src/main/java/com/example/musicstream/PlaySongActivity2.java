@@ -1,5 +1,6 @@
 package com.example.musicstream;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
@@ -80,10 +81,6 @@ public class PlaySongActivity2 extends AppCompatActivity {
         playSong(fileLink);
     }
 
-    public void bacK(View view){
-        finish();
-    }
-
     public void playSong(String songUrl){
         try{
             songplayer.reset();
@@ -159,6 +156,17 @@ public class PlaySongActivity2 extends AppCompatActivity {
             }
         }
         shuffleFlag = !shuffleFlag;
+    }
+    //onClick function for Toolbar + back button
+    //onClick from Toolbar(home) to Main Activity
+    public void teleportToHome(View view){startActivity(new Intent(PlaySongActivity2.this,MainActivity.class));}
+    //onClick from Toolbar(settings) to Settings Activity
+    public void teleportToSettings(View view){startActivity(new Intent(PlaySongActivity2.this,SettingsActivity.class));}
+    //onClick from Toolbar(collections) to Collections Activity
+    public void teleportToCollections(View view){startActivity(new Intent(PlaySongActivity2.this,CollectionsActivity.class));}
+    //onClick from Back button to finish current Activity
+    public void bacK(View view){
+        finish();
     }
 }
 

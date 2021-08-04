@@ -6,11 +6,97 @@
     android:layout_height="match_parent"
     android:background="@color/black">
 
+    <Button
+        android:id="@+id/toolbar_button_right4"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/toolbar_button_middle4"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="139dp"
+        android:layout_height="50dp"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/toolbar_button_left4"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="140dp"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/toolbar_button_settings_profile"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="194dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:onClick="rocketpowerToSettings"
+        android:scaleType="fitXY"
+        android:scaleX="0.25"
+        android:scaleY="0.9"
+        android:src="@drawable/settings_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/toolbar_button_home_profile"
+        android:layout_width="139dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:onClick="rocketpowerToHome"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/toolbar_button_collections_profile"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:onClick="rocketpowerToCollections"
+        android:scaleType="fitXY"
+        android:scaleX="0.20"
+        android:scaleY="0.5"
+        android:src="@drawable/collection_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <ImageButton
         android:id="@+id/imgbtn_profile_back"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,9 +107,10 @@
         app:srcCompat="@drawable/back_icon" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imgview_profile_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.126"
@@ -37,7 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/theoneilluseveryoften"
-        android:text="sample"
+        android:text="@string/sampletext"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,6 +144,7 @@
         android:autofillHints="Password"
         android:backgroundTint="#6DFFFFFF"
         android:fontFamily="@font/theoneilluseveryoften"
+        android:hint="@string/prompt_password"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
@@ -69,5 +157,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.149" />
+
+    <TextView
+        android:id="@+id/txt_profile_profile"
+        android:layout_width="267dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/theoneilluseveryoften"
+        android:text="@string/profile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

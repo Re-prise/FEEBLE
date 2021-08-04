@@ -28,7 +28,17 @@
         <activity android:name=".PlaySongActivity"/>
         <activity android:name=".PlaySongActivity2"/>
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".ArtistRecommendedActivity"/>
+        <activity android:name=".ArtistRecommendedActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK_ACTIVITY"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".CollectionsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.PICKACTIVITY"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".PlaylistActivity"/>
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SongCollection extends AppCompatActivity {
-    Song songs[] = new Song[3];
+    Song songs[] = new Song[4];
 
     public SongCollection() {
         Song dangNi = new Song(1,
@@ -30,10 +30,18 @@ public class SongCollection extends AppCompatActivity {
                 "https://p.scdn.co/mp3-preview/a3a056edce4f0fdace784afc42e3ffd6e1b77816?cid=2afe87a64b0042dabf51f37318616965",
                 3.47,
                 R.drawable.baige_cover);
+
+        Song wuli = new Song(4,
+                "雾里",
+                "姚六一",
+                "https://p.scdn.co/mp3-preview/36aacec17422bfe768edc6d6196971bdb284ad2a?cid=2afe87a64b0042dabf51f37318616965",
+                4.2,
+                R.drawable.cover_wuli);
         //Add Songs When Needed
     songs[0] = dangNi;
     songs[1] = liKaiNiYiHou;
     songs[2] = baige;
+    songs[3] = wuli;
     //Fill Array number
     }
     public Song getCurrentSong(int currentSongId) {

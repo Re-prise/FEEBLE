@@ -26,9 +26,7 @@ public class Authenticaion extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         Log.d("HEebus","GO DIE");
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         loginusername = findViewById(R.id.username);

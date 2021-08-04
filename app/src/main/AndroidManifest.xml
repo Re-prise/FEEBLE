@@ -14,7 +14,6 @@
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
-                <action android:name="android.intent.action.VOICE_COMMAND" />
                 <action android:name="android.intent.action.PICK_ACTIVITY"/>
              </intent-filter>
         </activity>
@@ -26,7 +25,6 @@
                 </intent-filter>
             </activity>
         <activity android:name=".PlaySongActivity"/>
-
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ArtistRecommendedActivity"/>
     </application>

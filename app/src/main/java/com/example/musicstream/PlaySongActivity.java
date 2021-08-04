@@ -46,13 +46,9 @@ public class PlaySongActivity extends AppCompatActivity {
         play_button = (ImageButton) findViewById(R.id.play_button);
         repeatFlag = false;
         shuffleFlag = false;
-
         shuffleList = Arrays.asList(songCollection.songs);
         System.out.println(shuffleList);
-
-
         ImageButton play_button = findViewById(R.id.play_button);
-
         //TODO: add a list at homepage in the future and link it to here
         //Bundle songData = this.getIntent().getExtras();
         seekBar = findViewById(R.id.seekBar);

@@ -126,7 +126,7 @@
     <Button
         android:id="@+id/settings_theme"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="409dp"
+        android:layout_width="410dp"
         android:layout_height="50dp"
         android:background="@color/purple_dark"
         android:text="@string/theme"

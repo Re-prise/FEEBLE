@@ -7,6 +7,94 @@
     android:background="@color/black"
     tools:context=".ArtistRecommendedActivity">
 
+    <Button
+        android:id="@+id/toolbar_button_right_artist"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Toolbar_button_middle" />
+
+    <ImageButton
+        android:id="@+id/toolbar_button_settings_artist"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:onClick="globallyTravelToSettings"
+        android:scaleType="fitXY"
+        android:scaleX="0.25"
+        android:scaleY="1"
+        android:src="@drawable/settings_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997" />
+
+    <Button
+        android:id="@+id/toolbar_button_middle_artist"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/toolbar_button_collection_artist"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:onClick="globallyTravelToCollections"
+        android:scaleType="fitXY"
+        android:scaleX="0.2"
+        android:scaleY="0.5"
+        android:src="@drawable/collection_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Toolbar_button_middle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/toolbar_button_left_artist"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="140dp"
+        android:background="@color/purple_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/toolbar_button_home_artist"
+        android:layout_width="141dp"
+        android:layout_height="49dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:onClick="globallyTravelToHome"
+        android:scaleType="fitXY"
+        android:scaleX="0.25"
+        android:scaleY="1"
+        android:src="@drawable/home_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <ImageView
         android:id="@+id/cover_artist_ArtistCover"
         android:layout_width="413dp"
@@ -62,7 +150,6 @@
         android:layout_width="408dp"
         android:layout_height="50dp"
         android:backgroundTint="#00000000"
-        android:onClick="handleSelection"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -146,14 +233,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtView_artist_ArtistName"
         app:layout_constraintVertical_bias="0.0" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="410dp"
-        android:layout_height="318dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtView_artist_ArtistName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

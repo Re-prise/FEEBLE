@@ -2,25 +2,21 @@ package com.example.musicstream;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-//import android.os.Handler;//
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-
-//TODO: for playlist songs
-
-public class PlaySongActivity extends AppCompatActivity {
+public class PlaySongActivity2 extends AppCompatActivity {
     private String title = "";
     private String artiste = "";
     private String fileLink = "";
@@ -63,10 +59,6 @@ public class PlaySongActivity extends AppCompatActivity {
         Log.d("temasek", "My file link is: " + fileLink);
     }
 
-    public void bacK(View view){
-        finish();
-    }
-
     //Runnable songbar = () -> Log.d("temasek","running");//
     public void displaySongBasedOnIndex(int currentIndex) {
         SongCollection SC = new SongCollection();
@@ -88,6 +80,10 @@ public class PlaySongActivity extends AppCompatActivity {
         playSong(fileLink);
     }
 
+    public void bacK(View view){
+        finish();
+    }
+
     public void playSong(String songUrl){
         try{
             songplayer.reset();
@@ -106,8 +102,8 @@ public class PlaySongActivity extends AppCompatActivity {
     public void playPrev (View view){
         currentIndex = songCollection.getPrevSong(currentIndex);
         Log.d("temasek","After playPrevious, the index is now :" + currentIndex);
-        displaySongBasedOnIndex(currentIndex);
-        playSong(fileLink);
+        //displaySongBasedOnIndex(currentIndex);
+        //playSong(fileLink);
     }
     public void playOrPauseMusic(View view){
         if (!songplayer.isPlaying()) {
@@ -124,8 +120,8 @@ public class PlaySongActivity extends AppCompatActivity {
     public void playNext (View view) {
         currentIndex = songCollection.getNextSong(currentIndex);
         Log.d("temasek","After playNexy, the index is now :" + currentIndex);
-        displaySongBasedOnIndex(currentIndex);
-        playSong(fileLink);
+        //displaySongBasedOnIndex(currentIndex);
+        //playSong(fileLink);
     }
     @Override
     public void onBackPressed(){

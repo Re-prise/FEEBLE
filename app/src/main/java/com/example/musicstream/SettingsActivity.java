@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.musicstream.ui.login.LoginActivity;
+
 public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,7 @@ public class SettingsActivity extends AppCompatActivity {
     public void moveToProfile(View view){startActivity(new Intent(SettingsActivity.this, Settingsprofile.class));}
 
     public void logOut(View view){
-        Intent newIntent = new Intent(SettingsActivity.this, Authenticaion.class);
+        Intent newIntent = new Intent(SettingsActivity.this, LoginActivity.class);
         finishAffinity();
         startActivity(newIntent);}
 }

@@ -21,6 +21,60 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
+        android:id="@+id/btn_playlist_song"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="1dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.579" />
+
+    <Button
+        android:id="@+id/btn_playlist_song2"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_button_left3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.642" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_playlist_favourite2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/collection_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641" />
+
+    <ImageView
+        android:id="@+id/cover_palylist_song"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.581"
+        app:srcCompat="@drawable/cover_wuli" />
+
+    <Button
         android:id="@+id/toolbar_button_middle3"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="136dp"
@@ -144,29 +198,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.523" />
 
-    <Button
-        android:id="@+id/btn_playlist_song"
-        android:layout_width="410dp"
-        android:layout_height="50dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
-
-    <ImageView
-        android:id="@+id/cover_palylist_song"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:contentDescription="@string/desc"
-        android:scaleType="centerCrop"
+    <TextView
+        android:id="@+id/txt_playlist_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/collections_favourited_artist"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582"
-        app:srcCompat="@drawable/cover_wuli" />
+        app:layout_constraintVertical_bias="0.592" />
 
     <TextView
         android:id="@+id/txt_playlist_song_title"
@@ -183,19 +226,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.567" />
 
-    <TextView
-        android:id="@+id/txt_playlist_artist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/collections_favourited_artist"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.135"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
-
     <ImageButton
         android:id="@+id/imgbtn_playlist_favourite"
         android:layout_width="50dp"
@@ -210,5 +240,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.578" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.642"
+        app:srcCompat="@drawable/coverimg_chen" />
+
+    <TextView
+        android:id="@+id/txt_playlist_artist2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joker Xue"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649" />
+
+    <TextView
+        android:id="@+id/txt_playlist_song_title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="病态"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

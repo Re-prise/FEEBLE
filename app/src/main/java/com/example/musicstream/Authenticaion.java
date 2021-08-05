@@ -31,7 +31,7 @@ public class Authenticaion extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("HEebus","GO DIE");
+        //tester//Log.d("heebus","Working?Yes");
         super.onCreate(savedInstanceState);
 
         getSupportActionBar().hide();
@@ -43,29 +43,26 @@ public class Authenticaion extends AppCompatActivity {
 
     }
 
-    //Username: 'guan', Password: 'password'
     public void logInTolong(View view) {
-        Log.d("HEebus","Gojek");
-        // check that both the fields are not empty
+        //tester//Log.d("Heebus","Gojek");
+        //to check that both the fields are not empty
         if (loginusername.getText().toString().length() != 0 &&
                 loginpassword.getText().toString().length() != 0) {
 
-
             List<ClassUser> students = new DbController(this).read();
             if (students.size() > 0) {
-                for (ClassUser obj : students) {
+                for (ClassUser obj : students){
                     int id = obj.id;
                     String studentFirstname = obj.userName;
                     String studentPass = obj.passWord;
                     names.add(studentFirstname);
-                    passwords.add(studentPass);
-                }
+                    passwords.add(studentPass);}
 
                 String[] unames = names.toArray(new String[names.size()]);
                 String[] pwords = passwords.toArray(new String[passwords.size()]);
 
-                for (int i = 0 ; i < unames.length; i++) {
-                    if (unames[i].matches(loginusername.getText().toString())) {
+                for (int i = 0 ; i < unames.length; i++){
+                    if (unames[i].matches(loginusername.getText().toString())){
 
                         for (int x = 0 ; x < pwords.length; x++){
                             if (unames[i].matches(loginusername.getText().toString()) && pwords[i].matches(loginpassword.getText().toString())){
@@ -80,28 +77,23 @@ public class Authenticaion extends AppCompatActivity {
                                 startActivity(new Intent(Authenticaion.this, MainActivity.class));
 
                                 finish();
-                                return;
-                            }
+                                return; }
                             else if ((x == pwords.length-1) && (!loginusername.getText().toString().equals(unames[i].toString())) && (!loginpassword.getText().toString().equals(pwords[i].toString()))){
                                 Toast.makeText(getBaseContext(), "Wrong username or password!", Toast.LENGTH_LONG).show();
-                                Log.d("auth_neue", "failed to login");
+                                //tester//Log.d("auth_neue", "failed to login");
                             }
                         }
                     }
                     else if ((i == unames.length-1) && (!loginusername.getText().toString().equals(unames[i].toString()))){
                         Toast.makeText(getBaseContext(), "User does not exist!", Toast.LENGTH_LONG).show();
-                        Log.d("auth_neue", "user dne");
-
+                        //tester//Log.d("auth_neue", "user dne");
                     }
                 }
 
             }
 
         }
-        else
-        {
-            Toast.makeText(getApplicationContext(), "Username and password cannot be empty", Toast.LENGTH_LONG).show();
-        }
+        else {Toast.makeText(getApplicationContext(), "Username and password cannot be empty", Toast.LENGTH_LONG).show();}
     }
 
     public void signUp(View view){

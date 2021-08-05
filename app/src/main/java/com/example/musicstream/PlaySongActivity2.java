@@ -78,8 +78,7 @@ public class PlaySongActivity2 extends AppCompatActivity {
         TextView txtDuration = findViewById(R.id.txt_artist_duration_total);
         txtDuration.setText(Double.toString(songLength));
 
-        playSong(fileLink);
-    }
+        playSong(fileLink);}
 
     public void playSong(String songUrl){
         try{
@@ -88,9 +87,7 @@ public class PlaySongActivity2 extends AppCompatActivity {
             songplayer.prepare();
             songplayer.start();
             gracefullyStopsWhenMusicEnds();
-
             play_button.setImageResource(R.drawable.pause_button);
-
             setTitle(title);
         } catch (IOException e) {
             e.printStackTrace();

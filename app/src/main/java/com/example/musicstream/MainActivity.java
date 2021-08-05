@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity{
         ImageButton toolbarSettings = findViewById(R.id.Toolbar_button_settings);}
 
     public void goToPlaySong(View myView) {
-        Log.d("temasek","The id of the pressed Image Button is : WORKING");
+        //Tester//Log.d("temasek","The id of the pressed Image Button is : WORKING");
         //String resourceId = getResources().getResourceEntryName(myView.getId());
-       // Log.d("temasek","The id of the pressed Image Button is :" + resourceId);
+       //Tester//Log.d("temasek","The id of the pressed Image Button is :" + resourceId);
         startActivity(new Intent(MainActivity.this, PlaySongActivity2.class));
         setContentView(R.layout.activity_play_song);}
 

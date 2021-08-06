@@ -35,7 +35,7 @@ public class PlaySongActivity2 extends AppCompatActivity {
     ImageButton shufflebtn;
 
     int convertedTime;
-
+    SeekBar seekBar;
     Boolean repeatFlag;
     Boolean shuffleFlag;
     List<Song> shuffleList;
@@ -52,6 +52,7 @@ public class PlaySongActivity2 extends AppCompatActivity {
         loopbtn = findViewById(R.id.loop_button);
         shufflebtn = findViewById(R.id.shuffle_button);
         play_button = (ImageButton) findViewById(R.id.play_button);
+        seekBar = findViewById(R.id.seekBar);
         repeatFlag = false;
         shuffleFlag = false;
         shuffleList = Arrays.asList(songCollection.songs);

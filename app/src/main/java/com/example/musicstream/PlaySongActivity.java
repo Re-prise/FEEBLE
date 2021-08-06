@@ -32,15 +32,6 @@ public class PlaySongActivity extends AppCompatActivity {
     private double songLength;
 
     private MediaPlayer songplayer = new MediaPlayer();
-//    private Handler myHandler = new Handler();;
-//    private SeekBar seekBar;
-//    private double startTime = 0;
-//    private double finalTime = 0;
-//    private int forwardTime = 5000;
-//    private int backwardTime = 5000;
-//    public static int oneTimeOnly = 0;
-//    TextView txtstartduration = findViewById(R.id.txt_artist_duration_start);
-//    TextView txtendduration = findViewById(R.id.txt_artist_duration_total);
     ImageButton play_button;
     SongCollection songCollection = new SongCollection();
     ImageButton loopbtn;
@@ -65,51 +56,12 @@ public class PlaySongActivity extends AppCompatActivity {
         ImageButton play_button = findViewById(R.id.play_button);
         //TODO: add a list at homepage in the future and link it to here
         //Bundle songData = this.getIntent().getExtras();
-//        seekBar = findViewById(R.id.seekBar);
         //currentIndex = songData.getInt("index");
         currentIndex = 1;
         Log.d("temasek", "Retrieved Position is: " + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         Log.d("temasek", "My file link is: " + fileLink);}
-        //TODO: solve raw issue?
-//        songplayer = MediaPlayer.create(this, R.raw.song);
-//        seekBar = (SeekBar)findViewById(R.id.seekBar);
-//        seekBar.setClickable(false);
-//        finalTime = songplayer.getDuration();
-//        startTime = songplayer.getCurrentPosition();
-//        if (oneTimeOnly == 0) {
-//            seekBar.setMax((int) finalTime);
-//            oneTimeOnly = 1;
-//        }
-//        txtendduration.setText(String.format("%d min, %d sec",
-//                TimeUnit.MILLISECONDS.toMinutes((long) finalTime),
-//                TimeUnit.MILLISECONDS.toSeconds((long) finalTime) -
-//                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes((long)
-//                                finalTime)))
-//        );
-//
-//        txtstartduration.setText(String.format("%d min, %d sec",
-//                TimeUnit.MILLISECONDS.toMinutes((long) startTime),
-//                TimeUnit.MILLISECONDS.toSeconds((long) startTime) -
-//                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes((long)
-//                                startTime)))
-//        );
-//        seekBar.setProgress((int)startTime);
-//        myHandler.postDelayed(UpdateSongTime,100);
-//    }
-//    private Runnable UpdateSongTime = new Runnable() {
-//        public void run() {
-//            startTime = songplayer.getCurrentPosition();
-//            txtstartduration.setText(String.format("%d min, %d sec",
-//                    TimeUnit.MILLISECONDS.toMinutes((long) startTime),
-//                    TimeUnit.MILLISECONDS.toSeconds((long) startTime) -
-//                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.
-//                                    toMinutes((long) startTime)))
-//            );
-//            seekBar.setProgress((int) startTime);
-//            myHandler.postDelayed(this, 100);
-//        }
-//    };
+
     public void displaySongBasedOnIndex(int currentIndex) {
         SongCollection SC = new SongCollection();
         Song song = SC.getCurrentSong(currentIndex);
@@ -157,7 +109,6 @@ public class PlaySongActivity extends AppCompatActivity {
     public void playOrPauseMusic(View view){
         if (!songplayer.isPlaying()) {
             songplayer.start();
-            //handler.postDelayed(songbar,1000);//
             gracefullyStopsWhenMusicEnds();
             play_button.setImageResource(R.drawable.pause_button);
             setTitle(" " + title +  " - " + artiste);

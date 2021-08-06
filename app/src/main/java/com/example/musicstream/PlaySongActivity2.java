@@ -28,8 +28,6 @@ public class PlaySongActivity2 extends AppCompatActivity {
     private MediaPlayer songplayer = new MediaPlayer();
     ImageButton play_button;
     SongCollection songCollection = new SongCollection();
-    SeekBar seekBar;
-    //Handler handler = new Handler();//
     ImageButton loopbtn;
     ImageButton shufflebtn;
     Boolean repeatFlag;
@@ -52,7 +50,6 @@ public class PlaySongActivity2 extends AppCompatActivity {
         ImageButton play_button = findViewById(R.id.play_button);
         //TODO: add a list at homepage in the future and link it to here
         //Bundle songData = this.getIntent().getExtras();
-        seekBar = findViewById(R.id.seekBar);
         //currentIndex = songData.getInt("index");
         currentIndex = 1;
         Log.d("temasek", "Retrieved Position is: " + currentIndex);

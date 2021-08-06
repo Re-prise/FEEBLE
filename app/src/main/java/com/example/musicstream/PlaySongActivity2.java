@@ -31,6 +31,8 @@ public class PlaySongActivity2 extends AppCompatActivity {
     private MediaPlayer songplayer = new MediaPlayer();
     ImageButton play_button;
     SongCollection songCollection = new SongCollection();
+    //for randomised shuffle
+    SongCollection randomCollection = new SongCollection();
     ImageButton loopbtn;
     ImageButton shufflebtn;
 
@@ -39,6 +41,7 @@ public class PlaySongActivity2 extends AppCompatActivity {
     Boolean repeatFlag;
     Boolean shuffleFlag;
     List<Song> shuffleList;
+
 
     private Handler mHandler = new Handler();
     private Runnable runnable;
@@ -55,8 +58,18 @@ public class PlaySongActivity2 extends AppCompatActivity {
         seekBar = findViewById(R.id.seekBar);
         repeatFlag = false;
         shuffleFlag = false;
+
+
+
         shuffleList = Arrays.asList(songCollection.songs);
-        System.out.println(shuffleList);
+        for (int i = 0; i < shuffleList.size(); i++){
+            Log.d("songs", "arr: " + shuffleList.get(i).getId());
+        }
+        for (int i = 0; i < shuffleList.size(); i++){
+            Log.d("songscollec", "arr: " + songCollection.songs[i].getId());
+        }
+
+
         ImageButton play_button = findViewById(R.id.play_button);
         //TODO: add a list at homepage in the future and link it to here
         //Bundle songData = this.getIntent().getExtras();
@@ -196,7 +209,12 @@ public class PlaySongActivity2 extends AppCompatActivity {
             });
 
 
-            gracefullyStopsWhenMusicEnds();
+            //TODO: for PlaySongActivity2 only
+            //gracefullyStopsWhenMusicEnds();
+
+            //TODO: for PlaySongActivity1 only
+            playsNextSongWhenMusicEnds();
+
             play_button.setImageResource(R.drawable.pause_button);
             setTitle(title);
         } catch (IOException e) {
@@ -222,7 +240,14 @@ public class PlaySongActivity2 extends AppCompatActivity {
             play_button.setImageResource(R.drawable.play_arrow); }
     }
     public void playNext (View view) {
-        currentIndex = songCollection.getNextSong(currentIndex);
+        if(shuffleFlag){
+            Log.d("shuffle1", "activated");
+            currentIndex = randomCollection.getNextSong(currentIndex);
+        }
+        else{
+            Log.d("shuffle1", "deactivated");
+            currentIndex = songCollection.getNextSong(currentIndex);
+        }
         Log.d("temasek","After playNexy, the index is now :" + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(fileLink);
@@ -242,6 +267,18 @@ public class PlaySongActivity2 extends AppCompatActivity {
         });
     }
 
+    //TODO: for PlaySongActivity1 only
+    private void playsNextSongWhenMusicEnds() {
+        songplayer.setOnCompletionListener(mp -> {
+            if (repeatFlag){
+                playOrPauseMusic(null);
+            } else {
+                //play_button.setImageResource(R.drawable.play_arrow);
+                playNext(null);
+            }
+        });
+    }
+
     public void loopSong(View view) {
         if (repeatFlag){
             loopbtn.setImageResource(R.drawable.repeat_icon);
@@ -256,14 +293,26 @@ public class PlaySongActivity2 extends AppCompatActivity {
             songCollection = new SongCollection();
         } else {
             shufflebtn.setImageResource(R.drawable.shuffle_icon_filled);
-            Collections.shuffle(shuffleList);
-            for (int i = 0; i < shuffleList.size(); i++) {
-                Log.d("shuffle", shuffleList.get(i).getTitle());
-                shuffleList.toArray(songCollection.songs);
+            Collections.shuffle(Arrays.asList(randomCollection.songs));
+
+            for (int s = 0; s < Arrays.asList(randomCollection.songs).size(); s++){
+                Log.d("shuffle1", "arr: " + randomCollection.songs[s].getTitle());
+
+                //TODO: try rearrange currentIndexSong that it is ALWAYS first song in randomised list
             }
+
         }
         shuffleFlag = !shuffleFlag;
     }
+
+    //TODO: CURRENT GET NEXT SONG is not randomised and hardstuck with default order
+    public int getRandomSong(int currentSongIndex){
+        Log.d("temasek","The current index is :" + currentSongIndex);
+        Log.d("temasek","The index in the arris :" + randomCollection.songs.length);
+        if (currentSongIndex >= randomCollection.songs.length-1){return currentSongIndex;}
+        else{return currentSongIndex + 1;}
+    }
+
     //onClick function for Toolbar + back button
     //onClick from Toolbar(home) to Main Activity
     public void teleportToHome(View view){startActivity(new Intent(PlaySongActivity2.this,MainActivity.class));}

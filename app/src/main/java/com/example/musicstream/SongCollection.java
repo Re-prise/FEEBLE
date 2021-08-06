@@ -94,10 +94,16 @@ public class SongCollection extends AppCompatActivity {
         int currentArrayIndex = CAI.SearchSongById(Integer.parseInt(resourceId));
         Log.d("temasek","The index in the array for this song is :" + currentArrayIndex);
         sendDataToActivity(currentArrayIndex);}
+
+    //TODO: CURRENT GET NEXT SONG is not randomised and hardstuck with default order
+    //TODO: need make currentsong always first of randomised list
     public int getNextSong(int currentSongIndex){
+        Log.d("temasek","The current index is :" + currentSongIndex);
         Log.d("temasek","The index in the arris :" + songs.length);
         if (currentSongIndex >= songs.length-1){return currentSongIndex;}
         else{return currentSongIndex + 1;}}
+
+
     public int getPrevSong(int currentSongIndex){
         if(currentSongIndex <=0){return currentSongIndex;}
         else{return currentSongIndex-1;}}

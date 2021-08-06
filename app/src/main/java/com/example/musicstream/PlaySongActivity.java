@@ -161,6 +161,9 @@ public class PlaySongActivity extends AppCompatActivity {
             songCollection = new SongCollection();
         } else {
             shufflebtn.setImageResource(R.drawable.shuffle_icon_filled);
+
+            //TODO: shuffle songCollection array and play from there
+
             Collections.shuffle(shuffleList);
             for (int i = 0; i < shuffleList.size(); i++) {
                 //tester//Log.d("shuffle", shuffleList.get(i).getTitle());

@@ -50,4 +50,17 @@ public class DbController extends DbHandler {
         db.close();
         return recordsList;
     }
+
+
+    public boolean update(ClassUser objectStudent) {
+        ContentValues values = new ContentValues();
+        values.put("firstname", objectStudent.userName);
+        values.put("pword", objectStudent.passWord);
+        String where = "id = ?";
+        String[] whereArgs = { Integer.toString(objectStudent.id) };
+        SQLiteDatabase db = this.getWritableDatabase();
+        boolean updateSuccessful = db.update("users", values, where, whereArgs) > 0;
+        db.close();
+        return updateSuccessful;
+    }
 }

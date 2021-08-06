@@ -28,6 +28,7 @@
         <activity android:name=".PlaySongActivity"/>
         <activity android:name=".PlaySongActivity2"/>
         <activity android:name=".SettingsActivity" />
+        <activity android:name=".Settingsprofile" />
         <activity android:name=".ArtistRecommendedActivity">
             <intent-filter>
                 <action android:name="android.intent.action.PICK_ACTIVITY"/>

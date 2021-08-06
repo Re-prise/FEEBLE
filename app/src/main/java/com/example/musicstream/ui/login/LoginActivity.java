@@ -3,6 +3,7 @@ package com.example.musicstream.ui.login;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.StringRes;
@@ -149,9 +150,9 @@ public class LoginActivity extends AppCompatActivity {
                                 //homeIntent.putExtra("STRING_I_NEED", unames[i]);
 
 
-//                                SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences("mypref", MODE_PRIVATE).edit();
-//                                editor.putString("name", loginusername.getText().toString());
-//                                editor.commit();
+                                SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences("mypref", MODE_PRIVATE).edit();
+                                editor.putString("name", loginusername.getText().toString());
+                                editor.commit();
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
 
                                 finish();

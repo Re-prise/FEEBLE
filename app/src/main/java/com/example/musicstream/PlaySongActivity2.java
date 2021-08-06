@@ -206,8 +206,8 @@ public class PlaySongActivity2 extends AppCompatActivity {
     public void playPrev (View view){
         currentIndex = songCollection.getPrevSong(currentIndex);
         Log.d("temasek","After playPrevious, the index is now :" + currentIndex);
-        //displaySongBasedOnIndex(currentIndex);
-        //playSong(fileLink);
+        displaySongBasedOnIndex(currentIndex);
+        playSong(fileLink);
     }
     public void playOrPauseMusic(View view){
         if (!songplayer.isPlaying()) {
@@ -224,8 +224,8 @@ public class PlaySongActivity2 extends AppCompatActivity {
     public void playNext (View view) {
         currentIndex = songCollection.getNextSong(currentIndex);
         Log.d("temasek","After playNexy, the index is now :" + currentIndex);
-        //displaySongBasedOnIndex(currentIndex);
-        //playSong(fileLink);
+        displaySongBasedOnIndex(currentIndex);
+        playSong(fileLink);
     }
     @Override
     public void onBackPressed(){

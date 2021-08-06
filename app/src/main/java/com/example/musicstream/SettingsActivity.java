@@ -21,7 +21,9 @@ public class SettingsActivity extends AppCompatActivity {
         finish();
     }
 
-    public void moveToProfile(View view){startActivity(new Intent(SettingsActivity.this, Settingsprofile.class));}
+    public void moveToProfile(View view){
+        startActivity(new Intent(SettingsActivity.this, Settingsprofile.class));
+    }
 
     public void logOut(View view){
         Intent newIntent = new Intent(SettingsActivity.this, LoginActivity.class);

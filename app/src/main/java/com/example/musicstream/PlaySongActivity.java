@@ -90,7 +90,6 @@ public class PlaySongActivity extends AppCompatActivity {
             gracefullyStopsWhenMusicEnds();
 
             play_button.setImageResource(R.drawable.pause_button);
-
             setTitle(title);
         } catch (IOException e) {
             e.printStackTrace();

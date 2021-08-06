@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SongCollection extends AppCompatActivity {
     Song songs[] = new Song[8];
-
     public SongCollection() {
         Song dangNi = new Song(1,
                 "当你",
@@ -65,16 +64,14 @@ public class SongCollection extends AppCompatActivity {
                 "https://p.scdn.co/mp3-preview/7696818fd57a3baf2708ef0b917f0c6ab587711b?cid=2afe87a64b0042dabf51f37318616965",
                 4.03,
                 R.drawable.coverimg_chen);
-        //Add Songs When Needed
-    songs[0] = dangNi;
-    songs[1] = liKaiNiYiHou;
-    songs[2] = baige;
-    songs[3] = wuli;
-    songs[4] = xingchendahai;
-    songs[5] = bingtai;
-    songs[6] = muouren;
-    songs[7] = manbanpai;
-    //Fill Array number
+        songs[0] = dangNi;
+        songs[1] = liKaiNiYiHou;
+        songs[2] = baige;
+        songs[3] = wuli;
+        songs[4] = xingchendahai;
+        songs[5] = bingtai;
+        songs[6] = muouren;
+        songs[7] = manbanpai;
     }
     public Song getCurrentSong(int currentSongId) {
         return songs[currentSongId];

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="412dp"
+    android:layout_height="50dp"
+    android:background="@color/black"
+    tools:context=".SongItem">
+
+    <Button
+        android:id="@+id/songItemSongBtn"
+        android:layout_width="412dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:onClick="travelToSong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/songItemSongCover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="362dp"
+        android:contentDescription="@string/desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/songItemSongBtn"
+        app:layout_constraintEnd_toEndOf="@+id/songItemSongBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/songItemSongBtn"
+        app:layout_constraintTop_toTopOf="@+id/songItemSongBtn"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/artist_cover_jj" />
+
+    <TextView
+        android:id="@+id/songItemSongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="322dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/artist_song_name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/songItemSongBtn"
+        app:layout_constraintEnd_toEndOf="@+id/songItemSongBtn"
+        app:layout_constraintStart_toStartOf="@+id/songItemSongBtn"
+        app:layout_constraintTop_toTopOf="@+id/songItemSongBtn" />
+
+    <TextView
+        android:id="@+id/songItemArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="313dp"
+        android:text="@string/artist_artist"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/songItemSongBtn"
+        app:layout_constraintEnd_toEndOf="@+id/songItemSongBtn"
+        app:layout_constraintStart_toStartOf="@+id/songItemSongBtn"
+        app:layout_constraintTop_toTopOf="@+id/songItemSongBtn" />
+
+    <ImageButton
+        android:id="@+id/songitemOth"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="332dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:focusable="auto"
+        android:onClick="favourite"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/songItemSongBtn"
+        app:layout_constraintEnd_toEndOf="@+id/songItemSongBtn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/songItemSongBtn"
+        app:layout_constraintTop_toTopOf="@+id/songItemSongBtn"
+        app:srcCompat="@drawable/collection_icon" />
+
+    <TextView
+        android:id="@+id/songItemSongDura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/artist_song_duration"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/songItemSongBtn"
+        app:layout_constraintEnd_toEndOf="@+id/songItemSongBtn"
+        app:layout_constraintStart_toStartOf="@+id/songItemSongBtn"
+        app:layout_constraintTop_toTopOf="@+id/songItemSongBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

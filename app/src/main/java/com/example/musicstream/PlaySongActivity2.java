@@ -3,7 +3,9 @@ package com.example.musicstream;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -13,6 +15,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -32,9 +35,15 @@ public class PlaySongActivity2 extends AppCompatActivity {
     //Handler handler = new Handler();//
     ImageButton loopbtn;
     ImageButton shufflebtn;
+
+    int convertedTime;
+
     Boolean repeatFlag;
     Boolean shuffleFlag;
     List<Song> shuffleList;
+
+    private Handler mHandler = new Handler();
+    private Runnable runnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +67,26 @@ public class PlaySongActivity2 extends AppCompatActivity {
         Log.d("temasek", "Retrieved Position is: " + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         Log.d("temasek", "My file link is: " + fileLink);
+
     }
+
+
+
+    public void ConvertToSecs(String n)
+    {
+        String[] words = n.split("\\:");
+        Log.d("show", "show num1: " + words[0]);
+        Log.d("show", "show num2: " + words[1]);
+        int minutes, seconds;
+//
+        minutes = Integer.parseInt(words[0]) * 60;
+        seconds = Integer.parseInt(words[1]) + minutes;
+        convertedTime = seconds;
+//
+        Log.d("show", "Minutes = " + minutes
+                + ", Seconds = " + seconds);
+    }
+
 
     //Runnable songbar = () -> Log.d("temasek","running");//
     public void displaySongBasedOnIndex(int currentIndex) {
@@ -78,7 +106,57 @@ public class PlaySongActivity2 extends AppCompatActivity {
         TextView txtDuration = findViewById(R.id.txt_artist_duration_total);
         txtDuration.setText(Double.toString(songLength));
 
-        playSong(fileLink);}
+        String doubleToTid = Double.toString(songLength);
+
+
+        doubleToTid = doubleToTid.replace(".",":");
+        ConvertToSecs(doubleToTid);
+        seekBar.setMax(convertedTime);
+        Log.d("music_tid", "Song time: "+ doubleToTid);
+
+        playSong(fileLink);
+    }
+
+
+
+    protected void onStop() {
+        Log.d("music_tid", "Perts");
+        super.onStop();
+        if(songplayer != null) {
+            if (songplayer.isPlaying()) {
+                seekBar.setProgress(0);
+                songplayer.stop();
+                finish();
+                if (mHandler!= null && runnable != null) {
+                    mHandler.removeCallbacks(runnable);
+                }
+            }
+            songplayer.release();
+            songplayer = null;
+        }
+    }
+
+
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        songplayer.stop();
+//        finish();
+//    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.d("music_tid", "Blyat");
+        if (keyCode == KeyEvent.KEYCODE_BACK
+                && event.getRepeatCount() == 0) {
+
+            songplayer.stop();
+            finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
 
     public void playSong(String songUrl){
         try{
@@ -86,6 +164,40 @@ public class PlaySongActivity2 extends AppCompatActivity {
             songplayer.setDataSource(songUrl);
             songplayer.prepare();
             songplayer.start();
+
+            this.runOnUiThread(runnable = new Runnable() {
+                @Override
+                public void run() {
+                    if(songplayer != null){
+                        int mCurrentPosition = songplayer.getCurrentPosition() / 1000;
+                        seekBar.setProgress(mCurrentPosition);
+                    }
+                    mHandler.postDelayed(this, 1000);
+                }
+            });
+
+
+            seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+
+                }
+
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {
+
+                }
+
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    if(songplayer != null && fromUser){
+                        songplayer.seekTo(progress * 1000);
+                    }
+                }
+            });
+
+
             gracefullyStopsWhenMusicEnds();
             play_button.setImageResource(R.drawable.pause_button);
             setTitle(title);

@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SongCollection extends AppCompatActivity {
     Song songs[] = new Song[8];
-
     public SongCollection() {
         Song dangNi = new Song(1,
                 "当你",
@@ -65,16 +64,14 @@ public class SongCollection extends AppCompatActivity {
                 "https://p.scdn.co/mp3-preview/7696818fd57a3baf2708ef0b917f0c6ab587711b?cid=2afe87a64b0042dabf51f37318616965",
                 4.03,
                 R.drawable.coverimg_chen);
-        //Add Songs When Needed
-    songs[0] = dangNi;
-    songs[1] = liKaiNiYiHou;
-    songs[2] = baige;
-    songs[3] = wuli;
-    songs[4] = xingchendahai;
-    songs[5] = bingtai;
-    songs[6] = muouren;
-    songs[7] = manbanpai;
-    //Fill Array number
+        songs[0] = dangNi;
+        songs[1] = liKaiNiYiHou;
+        songs[2] = baige;
+        songs[3] = wuli;
+        songs[4] = xingchendahai;
+        songs[5] = bingtai;
+        songs[6] = muouren;
+        songs[7] = manbanpai;
     }
     public Song getCurrentSong(int currentSongId) {
         return songs[currentSongId];
@@ -88,14 +85,13 @@ public class SongCollection extends AppCompatActivity {
         Intent intent = new Intent(this, PlaySongActivity.class);
         intent.putExtra("index", index);
         startActivity(intent);}
-    public void handleSelection(View myView){
-        String resourceId = getResources().getResourceEntryName(myView.getId());
-        SongCollection CAI = new SongCollection();
-        int currentArrayIndex = CAI.SearchSongById(Integer.parseInt(resourceId));
-        Log.d("temasek","The index in the array for this song is :" + currentArrayIndex);
-        sendDataToActivity(currentArrayIndex);}
+//    public void handleSelection(View myView){
+//        String resourceId = getResources().getResourceEntryName(myView.getId());
+//        int currentArrayIndex = SearchSongById(Integer.parseInt(resourceId));
+//        //tester//Log.d("temasek","The index in the array for this song is :" + currentArrayIndex);
+//        sendDataToActivity(currentArrayIndex);}
     public int getNextSong(int currentSongIndex){
-        Log.d("temasek","The index in the arris :" + songs.length);
+        //tester//Log.d("temasek","The index in the arris :" + songs.length);
         if (currentSongIndex >= songs.length-1){return currentSongIndex;}
         else{return currentSongIndex + 1;}}
     public int getPrevSong(int currentSongIndex){

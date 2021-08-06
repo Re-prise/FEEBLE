@@ -40,6 +40,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlaylistActivity"/>
+        <activity android:name=".SongItem"/>
     </application>
-
 </manifest>

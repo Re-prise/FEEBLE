@@ -22,4 +22,5 @@ public class PlaylistActivity extends AppCompatActivity {
     public void rocketjumpToSettings(View view){startActivity(new Intent(PlaylistActivity.this,SettingsActivity.class));}
     //onClick from Back button to finish current Activity
     public void rocketjump_back (View view){finish();}
+    public void rocketjumpToPlaySong (View view){startActivity(new Intent(PlaylistActivity.this,PlaySongActivity.class));}
 }

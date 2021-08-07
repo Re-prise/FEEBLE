@@ -23,5 +23,26 @@ public class PlaylistActivity3 extends AppCompatActivity {
     public void flyToSettings(View view){startActivity(new Intent(PlaylistActivity3.this,SettingsActivity.class));}
     //onClick from Back button to finish current Activity
     public void fly_back (View view){finish();}
-    public void flyToPlaySong (View view){startActivity(new Intent(PlaylistActivity3.this,PlaySongActivity3.class)); }
+    public void flyToPlaySong (View view){
+        switch (view.getId()) {
+            case R.id.btn_playlist_song1:
+                // do something
+                Intent i = new Intent(PlaylistActivity3.this, PlaySongActivity3.class);
+                i.putExtra("songname", "怪咖");
+                startActivity(i);
+                break;
+            case R.id.btn_playlist_song2:
+                Intent j = new Intent(PlaylistActivity3.this, PlaySongActivity3.class);
+                j.putExtra("songname", "狐狸");
+                startActivity(j);
+                break;
+            case R.id.btn_playlist_song3:
+                // i'm lazy, do nothing
+                Intent k = new Intent(PlaylistActivity3.this, PlaySongActivity3.class);
+                k.putExtra("songname", "天份");
+                startActivity(k);
+                break;
+        }
+        //startActivity(new Intent(PlaylistActivity3.this,PlaySongActivity3.class));
+    }
 }

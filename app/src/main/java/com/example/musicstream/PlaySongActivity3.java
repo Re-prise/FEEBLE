@@ -57,10 +57,18 @@ public class PlaySongActivity3 extends AppCompatActivity {
         seekBar = findViewById(R.id.seekBar);
         shuffleList = Arrays.asList(songCollection3.playlistplaylistsong);
         System.out.println(shuffleList);
-        //Bundle songData = this.getIntent().getExtras();
-        //currentIndex = songData.getInt("index");
-        currentIndex = 1;
-        currentIndex = 0;
+
+
+        Bundle songData = this.getIntent().getExtras();
+        String nameTitle = songData.getString("songname");
+        for (int i = 0; i < songCollection3.playlistplaylistsong.length; i++){
+            if (songCollection3.playlistplaylistsong[i].getTitle().equals(nameTitle)){
+                currentIndex = songCollection3.playlistplaylistsong[i].getId()-1;
+                //return;
+            }
+        }
+//        currentIndex = 1;
+//        currentIndex = 0;
         Log.d("temasek", "Retrieved Position is: " + currentIndex);
 
         displaySongBasedOnIndex(currentIndex);

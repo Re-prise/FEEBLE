@@ -26,7 +26,7 @@ public class ArtistRecommendedActivity extends AppCompatActivity {
     //onClick from Back button to finish current Activity
     public void bacKk (View view){finish();}
     public void globallyTravelToPlaylist1(View view){
-        Intent newIntent = new Intent(ArtistRecommendedActivity.this, PlaySongActivity5.class);
+        Intent newIntent = new Intent(ArtistRecommendedActivity.this, AlbumActivity1.class);
         finish();
         startActivity(newIntent);
     }

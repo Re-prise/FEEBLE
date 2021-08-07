@@ -60,11 +60,17 @@ public class PlaySongActivity extends AppCompatActivity {
         shuffleList = Arrays.asList(songCollection2.playlistSongs);
         System.out.println(shuffleList);
         //TODO: add a list at homepage in the future and link it to here
-        //Bundle songData = this.getIntent().getExtras();
-        //currentIndex = songData.getInt("index");
-        currentIndex = 1;
+        Bundle songData = this.getIntent().getExtras();
+        String nameTitle = songData.getString("songname1");
+        for (int i = 0; i < songCollection2.playlistSongs.length; i++){
+            if (songCollection2.playlistSongs[i].getTitle().equals(nameTitle)){
+                Log.d("show", "Retrieved Position is: " + i);
+                currentIndex = songCollection2.playlistSongs[i].getId()-1;
+                //return;
+            }
+        }
         //TODO: add a list at homepage in the future and link it to her
-        currentIndex = 0;
+        //currentIndex = 0;
         Log.d("temasek", "Retrieved Position is: " + currentIndex);
 
         displaySongBasedOnIndex(currentIndex);

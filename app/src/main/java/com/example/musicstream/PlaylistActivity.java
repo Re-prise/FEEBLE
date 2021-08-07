@@ -24,8 +24,24 @@ public class PlaylistActivity extends AppCompatActivity {
     //onClick from Back button to finish current Activity
     public void rocketjump_back (View view){finish();}
     public void rocketjumpToPlaySong (View view){
-        String ID = getResources().getResourceEntryName(view.getId());
-
-        startActivity(new Intent(PlaylistActivity.this,PlaySongActivity.class));
+        switch (view.getId()) {
+            case R.id.btn_playlist_song1:
+                // do something
+                Intent i = new Intent(PlaylistActivity.this, PlaySongActivity.class);
+                i.putExtra("songname1", "雾里");
+                startActivity(i);
+                break;
+            case R.id.btn_playlist_song2:
+                Intent j = new Intent(PlaylistActivity.this, PlaySongActivity.class);
+                j.putExtra("songname1", "病态");
+                startActivity(j);
+                break;
+            case R.id.btn_playlist_song3:
+                // i'm lazy, do nothing
+                Intent k = new Intent(PlaylistActivity.this, PlaySongActivity.class);
+                k.putExtra("songname1", "星辰大海");
+                startActivity(k);
+                break;
+        }
     }
 }

@@ -25,7 +25,7 @@ public class AlbumActivity1 extends AppCompatActivity {
     //onClick from Back button to finish current Activity
     public void jog_back (View view){finish();}
     public void jogToPlaySong(View view){
-        Intent newIntent = new Intent(AlbumActivity1.this, PlaySongActivity5.class);
+        Intent newIntent = new Intent(AlbumActivity1.this, PlaySongActivity6.class);
         finish();
         startActivity(newIntent);
     }

@@ -22,4 +22,6 @@ public class CollectionsActivity extends AppCompatActivity {
     public void travelToSettings(View view){startActivity(new Intent(CollectionsActivity.this,SettingsActivity.class));}
     //onClick from Back button to finish current Activity
     public void backk (View view){finish();}
+    public void travelToPlaylist(View view){startActivity(new Intent(CollectionsActivity.this, PlaylistActivity3.class));}
+    public void travelToMyPlaylist(View view){startActivity(new Intent(CollectionsActivity.this, PlaylistActivity.class));}
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ArtistRecommendedActivity">
+    tools:context=".ArtistRecommendedActivity2">
 
     <Button
         android:id="@+id/toolbar_button_right_artist"
@@ -26,7 +26,7 @@
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
-        android:onClick="globallyTravelToSettings"
+        android:onClick="walkToSettings"
         android:scaleType="fitXY"
         android:scaleX="0.25"
         android:scaleY="0.9"
@@ -57,7 +57,7 @@
         android:layout_height="50dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/desc"
-        android:onClick="globallyTravelToCollections"
+        android:onClick="walkToCollections"
         android:scaleType="fitXY"
         android:scaleX="0.2"
         android:scaleY="0.5"
@@ -85,7 +85,7 @@
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
-        android:onClick="globallyTravelToHome"
+        android:onClick="walkToHome"
         android:scaleType="fitCenter"
         android:src="@drawable/home_icon"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,7 +103,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/artist_cover_jj" />
+        app:srcCompat="@drawable/ic_cover_artist_jokerx" />
 
     <ImageButton
         android:id="@+id/btnBack_artist"
@@ -114,7 +114,7 @@
         android:layout_marginBottom="350dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
-        android:onClick="bacKk"
+        android:onClick="bacKkK"
         android:scaleType="fitCenter"
         android:src="@drawable/back_icon"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -124,22 +124,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <TextView
         android:id="@+id/txtView_artist_ArtistName"
         android:layout_width="412dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="436dp"
         android:background="@color/purple_light"
         android:fontFamily="@font/theoneilluseveryoften"
-        android:text="@string/artist_artist"
+        android:text="@string/jokerxue"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462" />
 
     <Button
         android:id="@+id/btn_artist_playlist1"
@@ -147,7 +148,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="60dp"
         android:backgroundTint="#00000000"
-        android:onClick="globallyTravelToPlaylist1"
+        android:onClick="walkToPlaylist"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -178,7 +179,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
         android:layout_marginEnd="334dp"
-        android:text="@string/artist_album"
+        android:text="@string/chen"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_artist_playlist1"
@@ -198,6 +199,6 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_artist_playlist1"
         app:layout_constraintStart_toStartOf="@+id/btn_artist_playlist1"
         app:layout_constraintTop_toTopOf="@+id/btn_artist_playlist1"
-        app:srcCompat="@drawable/jj_lin_dang_ni" />
+        app:srcCompat="@drawable/coverimg_chen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

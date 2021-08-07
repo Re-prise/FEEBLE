@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".PlaylistActivity">
+    tools:context=".PlaylistActivity3">
 
     <Button
         android:id="@+id/toolbar_button_right3"
@@ -25,8 +25,7 @@
         android:layout_width="410dp"
         android:layout_height="50dp"
         android:background="#00FFFFFF"
-        android:contentDescription="1"
-        android:onClick="rocketjumpToPlaySong"
+        android:onClick="flyToPlaySong"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -39,8 +38,7 @@
         android:layout_width="410dp"
         android:layout_height="50dp"
         android:background="#00FFFFFF"
-        android:contentDescription="2"
-        android:onClick="rocketjumpToPlaySong"
+        android:onClick="flyToPlaySong"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar_button_left3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -48,12 +46,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.642" />
 
+    <Button
+        android:id="@+id/btn_playlist_song3"
+        android:layout_width="412dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:onClick="flyToPlaySong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.702" />
+
     <ImageButton
         android:id="@+id/imgbtn_playlist_favourite2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
-        android:contentDescription="1002"
         android:scaleType="centerCrop"
         android:src="@drawable/collection_icon"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,7 +85,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.581"
-        app:srcCompat="@drawable/cover_wuli" />
+        app:srcCompat="@drawable/coverimg_jokerx" />
 
     <Button
         android:id="@+id/toolbar_button_middle3"
@@ -107,7 +117,7 @@
         android:layout_marginTop="194dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
-        android:onClick="rocketjumpToSettings"
+        android:onClick="flyToSettings"
         android:scaleType="fitXY"
         android:scaleX="0.25"
         android:scaleY="0.9"
@@ -126,7 +136,7 @@
         android:layout_marginTop="194dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/desc"
-        android:onClick="rocketjumpToCollections"
+        android:onClick="flyToCollections"
         android:scaleType="fitXY"
         android:scaleX="0.2"
         android:scaleY="0.5"
@@ -144,7 +154,7 @@
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
-        android:onClick="rocketjumpToHome"
+        android:onClick="flyToHome"
         android:scaleType="fitCenter"
         android:src="@drawable/home_icon"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar_button_left3"
@@ -160,7 +170,7 @@
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
-        android:onClick="rocketjump_back"
+        android:onClick="fly_back"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -190,7 +200,7 @@
         android:layout_height="48dp"
         android:background="@color/purple_dark"
         android:fontFamily="@font/theoneilluseveryoften"
-        android:text="@string/myPlaylistHeader"
+        android:text="@string/myplaylistst"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
@@ -205,7 +215,7 @@
         android:id="@+id/txt_playlist_artist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/collections_favourited_artist"
+        android:text="Joker Xue"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -219,7 +229,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/theoneilluseveryoften"
-        android:text="@string/collections_favourited_song"
+        android:text="怪咖"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -234,9 +244,8 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
-        android:contentDescription="1001"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_hearts_filled"
+        android:src="@drawable/collection_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.997"
@@ -256,7 +265,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.642"
-        app:srcCompat="@drawable/coverimg_chen" />
+        app:srcCompat="@drawable/coverimg_jokerx" />
 
     <TextView
         android:id="@+id/txt_playlist_artist2"
@@ -275,7 +284,7 @@
         android:id="@+id/txt_playlist_song_title_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="病态"
+        android:text="狐狸"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -284,20 +293,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.624" />
-
-    <Button
-        android:id="@+id/btn_playlist_song3"
-        android:layout_width="412dp"
-        android:layout_height="50dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="3"
-        android:onClick="rocketjumpToPlaySong"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702" />
 
     <ImageView
         android:id="@+id/imgview_playlist_song3"
@@ -309,7 +304,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.705"
-        app:srcCompat="@drawable/coverimg_xingchendahai" />
+        app:srcCompat="@drawable/coverimg_jokerx" />
 
     <TextView
         android:id="@+id/textView3"
@@ -319,13 +314,15 @@
         android:layout_marginTop="3dp"
         android:layout_marginEnd="281dp"
         android:layout_marginBottom="20dp"
-        android:text="星辰大海"
+        android:text="天份"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song3"
         app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song3"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song3" />
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txt_album_artist"
@@ -335,7 +332,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="319dp"
         android:layout_marginBottom="1dp"
-        android:text="黄霄雲"
+        android:text="Joker Xue"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song3"
         app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song3"

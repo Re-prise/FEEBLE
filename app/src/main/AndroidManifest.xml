@@ -12,12 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MusicStream"
         android:windowSoftInputMode="stateHidden|adjustResize">
-        <activity android:name=".MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-                <action android:name="android.intent.action.PICK_ACTIVITY"/>
-             </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity" />
             <activity android:name=".ui.login.LoginActivity" >
                 <intent-filter>
                     <action android:name="android.intent.action.MAIN" />
@@ -27,18 +22,19 @@
             </activity>
         <activity android:name=".PlaySongActivity"/>
         <activity android:name=".PlaySongActivity2"/>
+        <activity android:name=".PlaySongActivity3"/>
+        <activity android:name=".PlaySongActivity4"/>
+        <activity android:name=".PlaySongActivity5"/>
         <activity android:name=".SettingsActivity" />
         <activity android:name=".Settingsprofile" />
-        <activity android:name=".ArtistRecommendedActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.PICK_ACTIVITY"/>
-            </intent-filter>
-        </activity>
+        <activity android:name=".ArtistRecommendedActivity"/>
+        <activity android:name=".ArtistRecommendedActivity2"/>
         <activity android:name=".CollectionsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.PICKACTIVITY"/>
             </intent-filter>
         </activity>
         <activity android:name=".PlaylistActivity"/>
+        <activity android:name=".PlaylistActivity3"/>
     </application>
 </manifest>

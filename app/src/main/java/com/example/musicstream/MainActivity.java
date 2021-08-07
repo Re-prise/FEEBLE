@@ -34,10 +34,14 @@ public class MainActivity extends AppCompatActivity {
     public void goToArtist(View view) {
         startActivity(new Intent(MainActivity.this, ArtistRecommendedActivity.class));
     }
+    public void goToArtist2(View view){
+        startActivity(new Intent(MainActivity.this, ArtistRecommendedActivity2.class));
+    }
     public void goToCollections(View view) {
         startActivity(new Intent(MainActivity.this, CollectionsActivity.class));
     }
     public void goToPlaylist(View view){startActivity(new Intent(MainActivity.this, PlaylistActivity.class));}
+    public void goToPlaylistst(View view){startActivity(new Intent(MainActivity.this, PlaylistActivity3.class));}
 }
 //       int isClicked = 0;
 //    public void favourite(View View) {

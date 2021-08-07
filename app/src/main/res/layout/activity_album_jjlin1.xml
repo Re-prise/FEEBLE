@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".PlaylistActivity">
+    tools:context=".ArtistRecommendedActivity2">
 
     <Button
         android:id="@+id/toolbar_button_right3"
@@ -25,8 +25,7 @@
         android:layout_width="410dp"
         android:layout_height="50dp"
         android:background="#00FFFFFF"
-        android:contentDescription="1"
-        android:onClick="rocketjumpToPlaySong"
+        android:onClick="jogToPlaySong"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -39,8 +38,7 @@
         android:layout_width="410dp"
         android:layout_height="50dp"
         android:background="#00FFFFFF"
-        android:contentDescription="2"
-        android:onClick="rocketjumpToPlaySong"
+        android:onClick="jogToPlaySong"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar_button_left3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -75,7 +73,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.581"
-        app:srcCompat="@drawable/cover_wuli" />
+        app:srcCompat="@drawable/jj_lin_dang_ni" />
 
     <Button
         android:id="@+id/toolbar_button_middle3"
@@ -182,15 +180,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096"
-        app:srcCompat="@drawable/playlist_cover_img" />
+        app:srcCompat="@drawable/jj_lin_dang_ni" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="411dp"
         android:layout_height="48dp"
-        android:background="@color/purple_dark"
+        android:background="@color/purple_light"
         android:fontFamily="@font/theoneilluseveryoften"
-        android:text="@string/myPlaylistHeader"
+        android:text="@string/artist_album"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
@@ -205,7 +203,7 @@
         android:id="@+id/txt_playlist_artist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/collections_favourited_artist"
+        android:text="@string/artist_artist"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -219,7 +217,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/theoneilluseveryoften"
-        android:text="@string/collections_favourited_song"
+        android:text="她说"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -236,7 +234,7 @@
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="1001"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_hearts_filled"
+        android:src="@drawable/collection_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.997"
@@ -256,13 +254,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.642"
-        app:srcCompat="@drawable/coverimg_chen" />
+        app:srcCompat="@drawable/jj_lin_dang_ni" />
+
+    <Button
+        android:id="@+id/btn_playlist_song6"
+        android:layout_width="412dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="3"
+        android:onClick="jogToPlaySong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.946" />
 
     <TextView
         android:id="@+id/txt_playlist_artist2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Joker Xue"
+        android:text="@string/artist_artist"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -275,29 +287,67 @@
         android:id="@+id/txt_playlist_song_title_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="病态"
+        android:text="爱笑的眼睛"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.624" />
+        app:layout_constraintVertical_bias="0.623" />
 
     <Button
         android:id="@+id/btn_playlist_song3"
         android:layout_width="412dp"
         android:layout_height="50dp"
         android:background="#00FFFFFF"
-        android:contentDescription="3"
-        android:onClick="rocketjumpToPlaySong"
+        android:onClick="jogToPlaySong"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.702" />
+
+    <Button
+        android:id="@+id/btn_playlist_song"
+        android:layout_width="412dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:onClick="jogToPlaySong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
+
+    <Button
+        android:id="@+id/btn_playlist_song4"
+        android:layout_width="412dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:onClick="jogToPlaySong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
+
+    <Button
+        android:id="@+id/btn_playlist_song5"
+        android:layout_width="412dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:onClick="jogToPlaySong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
 
     <ImageView
         android:id="@+id/imgview_playlist_song3"
@@ -309,7 +359,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.705"
-        app:srcCompat="@drawable/coverimg_xingchendahai" />
+        app:srcCompat="@drawable/jj_lin_dang_ni" />
+
+    <ImageView
+        android:id="@+id/imgview_playlist_song"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761"
+        app:srcCompat="@drawable/jj_lin_dang_ni" />
+
+    <ImageView
+        android:id="@+id/imgview_playlist_song4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824"
+        app:srcCompat="@drawable/jj_lin_dang_ni" />
+
+    <ImageView
+        android:id="@+id/imgview_playlist_song5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.881"
+        app:srcCompat="@drawable/jj_lin_dang_ni" />
+
+    <ImageView
+        android:id="@+id/imgview_playlist_song6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942"
+        app:srcCompat="@drawable/jj_lin_dang_ni" />
 
     <TextView
         android:id="@+id/textView3"
@@ -319,13 +417,76 @@
         android:layout_marginTop="3dp"
         android:layout_marginEnd="281dp"
         android:layout_marginBottom="20dp"
-        android:text="星辰大海"
+        android:text="只对你有感觉"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song3"
         app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song3"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song3" />
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="323dp"
+        android:layout_marginBottom="22dp"
+        android:text="当你"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="282dp"
+        android:layout_marginBottom="23dp"
+        android:text="一眼万年"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song5"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song5"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song5"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginEnd="303dp"
+        android:layout_marginBottom="23dp"
+        android:text="保护色"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song4"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song4"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song4"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginEnd="263dp"
+        android:layout_marginBottom="23dp"
+        android:text="握不住的他"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song6"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song6"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song6"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song6" />
 
     <TextView
         android:id="@+id/txt_album_artist"
@@ -335,25 +496,142 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="319dp"
         android:layout_marginBottom="1dp"
-        android:text="黄霄雲"
+        android:text="@string/artist_artist"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song3"
         app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song3"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song3"
         app:layout_constraintTop_toTopOf="@+id/btn_playlist_song3" />
 
+    <TextView
+        android:id="@+id/txt_album_artist2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="326dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/artist_artist"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song" />
+
+    <TextView
+        android:id="@+id/txt_album_artist3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="323dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/artist_artist"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song5"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song5"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song5"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song5" />
+
+    <TextView
+        android:id="@+id/txt_album_artist4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="324dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/artist_artist"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song4"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song4"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song4"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song4" />
+
+    <TextView
+        android:id="@+id/txt_album_artist5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="322dp"
+        android:text="@string/artist_artist"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song6"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song6"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song6"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song6" />
+
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="360dp"
-        android:layout_marginEnd="3dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song3"
         app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song3"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song3"
         app:layout_constraintTop_toTopOf="@+id/btn_playlist_song3"
+        app:srcCompat="@drawable/collection_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="360dp"
+        android:layout_marginEnd="2dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song4"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song4"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song4"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song4"
+        app:srcCompat="@drawable/collection_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="3dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song6"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song6"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song6"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song6"
+        app:srcCompat="@drawable/collection_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="2dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song5"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song5"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song5"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song5"
+        app:srcCompat="@drawable/collection_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="2dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song"
+        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song"
+        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song"
+        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song"
         app:srcCompat="@drawable/collection_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

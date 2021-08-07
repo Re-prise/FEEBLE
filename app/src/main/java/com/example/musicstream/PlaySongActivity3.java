@@ -7,20 +7,19 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-public class PlaySongActivity extends AppCompatActivity {
+public class PlaySongActivity3 extends AppCompatActivity {
     private String title = "";
     private String artiste = "";
     private String fileLink = "";
@@ -30,8 +29,8 @@ public class PlaySongActivity extends AppCompatActivity {
 
     private MediaPlayer songplayer = new MediaPlayer();
     ImageButton play_button;
-    SongCollection2 songCollection2 = new SongCollection2();
-    SongCollection2 randomCollection2 = new SongCollection2();
+    SongCollection3 songCollection3 = new SongCollection3();
+    SongCollection3 randomCollection3 = new SongCollection3();
     ImageButton loopbtn;
     ImageButton shufflebtn;
     Boolean repeatFlag;
@@ -39,7 +38,6 @@ public class PlaySongActivity extends AppCompatActivity {
     List<Song> shuffleList;
     int convertedTime;
     SeekBar seekBar;
-    //TODO: Handler is deprecated, music wont play, 'some input files use or override a deprecated API.
     private Handler mHandler = new Handler();
     private Runnable runnable;
 
@@ -55,15 +53,13 @@ public class PlaySongActivity extends AppCompatActivity {
         play_button = (ImageButton) findViewById(R.id.play_button);
         repeatFlag = false;
         shuffleFlag = false;
-        shuffleList = Arrays.asList(songCollection2.playlistSongs);
+        shuffleList = Arrays.asList(songCollection3.playlistplaylistsong);
         seekBar = findViewById(R.id.seekBar);
-        shuffleList = Arrays.asList(songCollection2.playlistSongs);
+        shuffleList = Arrays.asList(songCollection3.playlistplaylistsong);
         System.out.println(shuffleList);
-        //TODO: add a list at homepage in the future and link it to here
         //Bundle songData = this.getIntent().getExtras();
         //currentIndex = songData.getInt("index");
         currentIndex = 1;
-        //TODO: add a list at homepage in the future and link it to her
         currentIndex = 0;
         Log.d("temasek", "Retrieved Position is: " + currentIndex);
 
@@ -88,7 +84,7 @@ public class PlaySongActivity extends AppCompatActivity {
 
 
     public void displaySongBasedOnIndex(int currentIndex) {
-        SongCollection2 SC = new SongCollection2();
+        SongCollection3 SC = new SongCollection3();
         Song song;
         if (shuffleFlag){
             song = getRandoSong(currentIndex);
@@ -157,7 +153,6 @@ public class PlaySongActivity extends AppCompatActivity {
             songplayer.prepare();
             songplayer.start();
 
-
             this.runOnUiThread(runnable = new Runnable() {
                 @Override
                 public void run() {
@@ -209,7 +204,7 @@ public class PlaySongActivity extends AppCompatActivity {
 
     //to skip to prev song.
     public void playPrev (View view){
-        currentIndex = songCollection2.getPrevSong(currentIndex);
+        currentIndex = songCollection3.getPrevSong(currentIndex);
         //tester//Log.d("temasek","After playPrevious, the index is now :" + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(fileLink);
@@ -235,7 +230,7 @@ public class PlaySongActivity extends AppCompatActivity {
         }
         else{
             Log.d("shuffle1", "deactivated");
-            currentIndex = songCollection2.getNextSong(currentIndex);
+            currentIndex = songCollection3.getNextSong(currentIndex);
         }
         //tester//Log.d("temasek","After playNexy, the index is now :" + currentIndex);
         displaySongBasedOnIndex(currentIndex);
@@ -289,11 +284,11 @@ public class PlaySongActivity extends AppCompatActivity {
     public void shuffleSong(View view) {
         if (shuffleFlag){
             shufflebtn.setImageResource(R.drawable.shuffle_icon);
-            songCollection2 = new SongCollection2();
+            songCollection3 = new SongCollection3();
         } else {
             shufflebtn.setImageResource(R.drawable.shuffle_icon_filled);
-            shuffleList = Arrays.asList(randomCollection2.playlistSongs);
-            Collections.shuffle(Arrays.asList(randomCollection2.playlistSongs));
+            shuffleList = Arrays.asList(randomCollection3.playlistplaylistsong);
+            Collections.shuffle(Arrays.asList(randomCollection3.playlistplaylistsong));
 
             for (int s = 0; s < shuffleList.size(); s++){
                 Log.d("shuffle1", "arr: " + shuffleList.get(s).getTitle());
@@ -301,7 +296,7 @@ public class PlaySongActivity extends AppCompatActivity {
                 if (title == shuffleList.get(s).getTitle()){
                     Log.d("shuffle1", "located! song position is " + s);
 
-                    shuffleList.toArray(randomCollection2.playlistSongs);
+                    shuffleList.toArray(randomCollection3.playlistplaylistsong);
                 }
             }
 
@@ -311,11 +306,11 @@ public class PlaySongActivity extends AppCompatActivity {
     //initiate song on list
     public Song getRandoSong(int currentSongId) {
 
-        return randomCollection2.playlistSongs[currentSongId];
+        return randomCollection3.playlistplaylistsong[currentSongId];
     }
     //everytime when song ends, the playlist will reshuffle again
     public void reshuffleSong() {
-        shuffleList = Arrays.asList(randomCollection2.playlistSongs);
+        shuffleList = Arrays.asList(randomCollection3.playlistplaylistsong);
         Collections.shuffle(shuffleList);
 
         for (int s = 0; s < shuffleList.size(); s++){
@@ -323,26 +318,26 @@ public class PlaySongActivity extends AppCompatActivity {
 
             if (title == shuffleList.get(s).getTitle()){
                 Log.d("shuffle1", "located! song position is " + s);
-                shuffleList.toArray(songCollection2.playlistSongs);
+                shuffleList.toArray(songCollection3.playlistplaylistsong);
             }
         }
     }
     //for playing next and previous shuffling song
     public int getRandomSong(int currentSongIndex){
         Log.d("temasek","The current index is :" + currentSongIndex);
-        Log.d("temasek","The index in the arris :" + randomCollection2.playlistSongs.length);
-        if (currentSongIndex >= randomCollection2.playlistSongs.length-1){return currentSongIndex;}
+        Log.d("temasek","The index in the arris :" + randomCollection3.playlistplaylistsong.length);
+        if (currentSongIndex >= randomCollection3.playlistplaylistsong.length-1){return currentSongIndex;}
         else{return currentSongIndex + 1;}
     }
 
 
     //onClick function for Toolbar + back button
     //onClick from Toolbar(home) to Main Activity
-    public void teleportToHome(View view){startActivity(new Intent(PlaySongActivity.this,MainActivity.class));}
+    public void teleportToHome(View view){startActivity(new Intent(PlaySongActivity3.this,MainActivity.class));}
     //onClick from Toolbar(settings) to Settings Activity
-    public void teleportToSettings(View view){startActivity(new Intent(PlaySongActivity.this,SettingsActivity.class));}
+    public void teleportToSettings(View view){startActivity(new Intent(PlaySongActivity3.this,SettingsActivity.class));}
     //onClick from Toolbar(collections) to Collections Activity
-    public void teleportToCollections(View view){startActivity(new Intent(PlaySongActivity.this,CollectionsActivity.class));}
+    public void teleportToCollections(View view){startActivity(new Intent(PlaySongActivity3.this,CollectionsActivity.class));}
     //onClick from Back button to finish current Activity
     public void bacK(View view){
         finish();

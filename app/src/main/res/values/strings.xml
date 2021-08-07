@@ -42,4 +42,7 @@
     <string name="defaulttime">0.00</string>
     <string name="artist_song_duration_num">4.15</string>
     <string name="sampletext">Sample</string>
+    <string name="myplaylistst">Playlist</string>
+    <string name="jokerxue">Joker Xue</string>
+    <string name="chen">尘</string>
 </resources>

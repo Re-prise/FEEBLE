@@ -15,25 +15,21 @@ public class SongCollection2 extends AppCompatActivity {
                 "https://p.scdn.co/mp3-preview/36aacec17422bfe768edc6d6196971bdb284ad2a?cid=2afe87a64b0042dabf51f37318616965",
                 4.2,
                 R.drawable.cover_wuli);
-
-        Song xingchendahai = new Song(2,
-                "星辰大海",
-                "黄霄雲",
-                "https://p.scdn.co/mp3-preview/d1c4a4296c5b7915b4d1a141fc84530c180c9c60?cid=2afe87a64b0042dabf51f3731861696",
-                3.46,
-                R.drawable.coverimg_xingchendahai);
-
-        Song bingtai = new Song(3,
+        Song bingtai = new Song(2,
                 "病態",
                 "Joker Xue",
                 "https://p.scdn.co/mp3-preview/e80f93514ad3b589dc18765773b181004df88ebb?cid=2afe87a64b0042dabf51f37318616965",
                 4.66,
                 R.drawable.coverimg_chen);
-
+        Song xingchendahai = new Song(3,
+                "星辰大海",
+                "黄霄雲",
+                "https://p.scdn.co/mp3-preview/d1c4a4296c5b7915b4d1a141fc84530c180c9c60?cid=2afe87a64b0042dabf51f3731861696",
+                3.46,
+                R.drawable.coverimg_xingchendahai);
         playlistSongs[0] = wuli;
-        playlistSongs[1] = xingchendahai;
-        playlistSongs[2] = bingtai;
-
+        playlistSongs[1] = bingtai;
+        playlistSongs[2] = xingchendahai;
     }
     public Song getCurrentSong(int currentSongId) {
         return playlistSongs[currentSongId];
@@ -51,12 +47,12 @@ public class SongCollection2 extends AppCompatActivity {
         String resourceId = getResources().getResourceEntryName(myView.getId());
         SongCollection2 CAI = new SongCollection2();
         int currentArrayIndex = CAI.SearchSongById(Integer.parseInt(resourceId));
-        Log.d("temasek","The index in the array for this song is :" + currentArrayIndex);
+        //tester//Log.d("temasek","The index in the array for this song is :" + currentArrayIndex);
         sendDataToActivity(currentArrayIndex);}
 
     public int getNextSong(int currentSongIndex){
-        Log.d("temasek","The current index is :" + currentSongIndex);
-        Log.d("temasek","The index in the arris :" + playlistSongs.length);
+        //tester//Log.d("temasek","The current index is :" + currentSongIndex);
+        //tester//Log.d("temasek","The index in the arris :" + playlistSongs.length);
         if (currentSongIndex >= playlistSongs.length-1){return currentSongIndex;}
         else{return currentSongIndex + 1;}}
 

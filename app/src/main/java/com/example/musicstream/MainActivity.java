@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public void goToSettings(View view){startActivity(new Intent(MainActivity.this, SettingsActivity.class)); }
 
     public void goToArtist(View view) {
+        Log.d("HUBS","Working");
         startActivity(new Intent(MainActivity.this, ArtistRecommendedActivity.class));
     }
     public void goToArtist2(View view){

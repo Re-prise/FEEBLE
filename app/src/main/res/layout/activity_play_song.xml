@@ -104,7 +104,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.281"
+        app:layout_constraintVertical_bias="0.096"
         app:srcCompat="@drawable/jj_lin_dang_ni" />
 
     <TextView
@@ -132,7 +132,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="184dp"
-        android:layout_marginTop="21dp"
         android:layout_marginEnd="185dp"
         android:layout_marginBottom="181dp"
         android:fontFamily="@font/theoneilluseveryoften"
@@ -141,8 +140,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/toolbar_button_middle2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_song_title" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94" />
 
     <ImageButton
         android:id="@+id/btnBack_play_song"
@@ -160,7 +161,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/play_button"
@@ -209,8 +211,8 @@
         android:src="@drawable/skip_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.626"
-        app:layout_constraintStart_toEndOf="@+id/play_button"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.842" />
 
@@ -218,7 +220,6 @@
         android:id="@+id/shuffle_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="109dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
@@ -227,18 +228,17 @@
         android:scaleX="2"
         android:scaleY="2"
         android:src="@drawable/shuffle_icon"
-        app:layout_constraintBottom_toTopOf="@+id/next_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/song_cover_art"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.733" />
 
     <ImageButton
         android:id="@+id/loop_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="205dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
@@ -247,12 +247,12 @@
         android:scaleX="2"
         android:scaleY="2"
         android:src="@drawable/repeat_icon"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar_button_left2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/song_cover_art"
-        app:layout_constraintVertical_bias="0.212" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.844" />
 
     <TextView
         android:id="@+id/txt_artist_duration_start"
@@ -263,12 +263,12 @@
         android:layout_marginBottom="17dp"
         android:text="@string/defaulttime"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/previous_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.692"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.783" />
 
     <TextView
         android:id="@+id/txt_artist_duration_total"
@@ -279,23 +279,23 @@
         android:layout_marginBottom="17dp"
         android:text="@string/artist_song_duration_num"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/next_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.782" />
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="355dp"
-        android:layout_height="9dp"
-        android:layout_marginTop="18dp"
+        android:layout_width="345dp"
+        android:layout_height="14dp"
         android:layout_marginBottom="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/play_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_artist"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.763" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

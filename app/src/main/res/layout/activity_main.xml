@@ -11,6 +11,7 @@
         android:id="@+id/recommend_song_cover"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginTop="51dp"
         android:layout_marginEnd="350dp"
         android:layout_marginBottom="94dp"
         android:contentDescription="@string/desc"
@@ -18,8 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/recommended_song"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408"
+        app:layout_constraintTop_toTopOf="@+id/Header_Main_Songs"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/li_kai_ni_yi_hou" />
 
     <Button
@@ -36,7 +37,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Header_Main_Songs"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <TextView
         android:id="@+id/Header_Main_Your_Playlists"
@@ -48,9 +49,12 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
         android:textColorLink="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SearchView" />
+        app:layout_constraintTop_toBottomOf="@+id/SearchView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <SearchView
         android:id="@+id/SearchView"
@@ -199,7 +203,7 @@
         android:id="@+id/Header_Main_Songs"
         android:layout_width="412dp"
         android:layout_height="50dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="202dp"
         android:background="@color/purple_light"
         android:fontFamily="@font/theoneilluseveryoften"
         android:text="@string/songsYouMayLikeHeader"
@@ -209,7 +213,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Header_Main_Your_Playlists"
+        app:layout_constraintTop_toBottomOf="@+id/SearchView"
         app:layout_constraintVertical_bias="0.001" />
 
     <ImageButton
@@ -370,25 +374,25 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.367" />
+        app:layout_constraintTop_toTopOf="@+id/recommended_song"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/recommend_artist_by"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/theoneilluseveryoften"
         android:text="@string/byLine"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintHorizontal_bias="0.143"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintTop_toTopOf="@+id/recommended_song"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

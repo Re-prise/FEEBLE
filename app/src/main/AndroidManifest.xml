@@ -25,6 +25,7 @@
         <activity android:name=".PlaySongActivity3"/>
         <activity android:name=".PlaySongActivity4"/>
         <activity android:name=".PlaySongActivity5"/>
+        <activity android:name=".PlaySongActivity6"/>
         <activity android:name=".SettingsActivity" />
         <activity android:name=".Settingsprofile" />
         <activity android:name=".ArtistRecommendedActivity"/>

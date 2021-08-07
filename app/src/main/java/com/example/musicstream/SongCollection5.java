@@ -9,46 +9,46 @@ public class SongCollection5 extends AppCompatActivity {
     Song albumplaylistplaylistsong[] = new Song[5];
     public SongCollection5() {
         Song tashuo = new Song(1,
-                "木偶人",
+                "她说",
                 "JJ Lin",
-                "https://p.scdn.co/mp3-preview/a09ed6a74e0a04e40877dbaff4b1bfcba93ecea8?cid=2afe87a64b0042dabf51f37318616965",
-                4.78,
+                "https://p.scdn.co/mp3-preview/c2b951a9e420f3aa614ffb69a299850c53e1f031?cid=2afe87a64b0042dabf51f37318616965",
+                5.31,
                 R.drawable.artist_cover_jj);
         Song aixiaodeyanjing = new Song(2,
-                "慢半拍",
+                "爱笑的眼睛",
                 "JJ Lin",
-                "https://p.scdn.co/mp3-preview/7696818fd57a3baf2708ef0b917f0c6ab587711b?cid=2afe87a64b0042dabf51f37318616965",
-                4.03,
+                "https://p.scdn.co/mp3-preview/1097b7e92d038493659e7e5466d5970757c263a5?cid=2afe87a64b0042dabf51f37318616965",
+                4.19,
                 R.drawable.artist_cover_jj);
         Song zhiduiniyouganjue = new Song(3,
-                "這麼久沒見",
+                "只对你有感觉",
                 "JJ Lin",
-                "https://p.scdn.co/mp3-preview/4cf1e77a0bc5060a48692105ec60c7b94461c399?cid=2afe87a64b0042dabf51f37318616965",
-                4.92,
+                "https://p.scdn.co/mp3-preview/7971cbae63412fee6a34e0c268e031a71475251f?cid=2afe87a64b0042dabf51f37318616965",
+                4.41,
                 R.drawable.artist_cover_jj);
         Song dangni = new Song(4,
-                "笑場",
+                "当你",
                 "JJ Lin",
-                "https://p.scdn.co/mp3-preview/b9cda6b1738ef497b28d19f02e343a4a4ff108d4?cid=2afe87a64b0042dabf51f37318616965",
-                4.54,
+                "https://p.scdn.co/mp3-preview/0220451d271dfcf8a3b9a9ac79565ad530c24631?cid=2afe87a64b0042dabf51f37318616965",
+                4.15,
                 R.drawable.artist_cover_jj);
         Song yiyanwannian = new Song(5,
-                "病態",
+                "一眼万年",
                 "JJ Lin",
-                "https://p.scdn.co/mp3-preview/e80f93514ad3b589dc18765773b181004df88ebb?cid=2afe87a64b0042dabf51f37318616965",
-                4.66,
+                "https://p.scdn.co/mp3-preview/eac11ffd37966c1a2a5deca6581314bd99d12be3?cid=2afe87a64b0042dabf51f37318616965",
+                4.27,
                 R.drawable.artist_cover_jj);
         Song baohuse = new Song(6,
-                "",
+                "保护色",
                 "JJ Lin",
-                "",
-                1,
+                "https://p.scdn.co/mp3-preview/5a4fceee194feb14e834c6e6bd18616bb2f1d07f?cid=2afe87a64b0042dabf51f37318616965",
+                3.29,
                 R.drawable.artist_cover_jj);
-        Song wobujingdeta = new Song(7,
-                "",
+        Song wobujindeta = new Song(7,
+                "握不紧的他",
                 "JJ Lin",
-                "",
-                1,
+                "https://p.scdn.co/mp3-preview/f8dc7d881b19230e65656c83cde76e8e315f861e?cid=2afe87a64b0042dabf51f37318616965",
+                3.49,
                 R.drawable.artist_cover_jj);
         albumplaylistplaylistsong[0] = tashuo;
         albumplaylistplaylistsong[1] = aixiaodeyanjing;
@@ -56,7 +56,7 @@ public class SongCollection5 extends AppCompatActivity {
         albumplaylistplaylistsong[3] = dangni;
         albumplaylistplaylistsong[4] = yiyanwannian;
         albumplaylistplaylistsong[5] = baohuse;
-        albumplaylistplaylistsong[6] = wobujingdeta;
+        albumplaylistplaylistsong[6] = wobujindeta;
     }
     public Song getCurrentSong(int currentSongId) {
         return albumplaylistplaylistsong[currentSongId];

@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.musicstream.ui.login.LoginActivity;
+
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
         //Tester//Log.d("temasek","The id of the pressed Image Button is : WORKING");
         //String resourceId = getResources().getResourceEntryName(myView.getId());
         //Tester//Log.d("temasek","The id of the pressed Image Button is :" + resourceId);
-        startActivity(new Intent(MainActivity.this, PlaySongActivity2.class));
+        Intent newIntent = new Intent(MainActivity.this, PlaySongActivity2.class);
+        finish();
+        startActivity(newIntent);
+        //startActivity(new Intent(MainActivity.this, PlaySongActivity2.class));
         setContentView(R.layout.activity_play_song);
     }
 

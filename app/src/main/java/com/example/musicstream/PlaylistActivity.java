@@ -12,6 +12,7 @@ public class PlaylistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //Sets current layout from res.layouts
         setContentView(R.layout.activity_playlist_myplaylist);
+        getSupportActionBar().hide();
     }
     //onClick function for Toolbar + back button
     //onClick from Toolbar(home) to Main Activity

@@ -194,6 +194,10 @@ public class LoginActivity extends AppCompatActivity {
             if(createSuccessful){
                 Toast.makeText(this, "User information was saved.", Toast.LENGTH_SHORT).show();
                 Intent homeIntent = new Intent(view.getContext(), MainActivity.class);
+
+                SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences("mypref", MODE_PRIVATE).edit();
+                editor.putString("name", loginusername.getText().toString());
+                editor.commit();
                 startActivity(homeIntent);
 
             }else{

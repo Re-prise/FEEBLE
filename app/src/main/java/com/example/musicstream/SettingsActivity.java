@@ -1,6 +1,7 @@
 package com.example.musicstream;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -26,6 +27,10 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void logOut(View view){
+
+        SharedPreferences preferences = getSharedPreferences("mypref", 0);
+        preferences.edit().remove("name").apply();
+
         Intent newIntent = new Intent(SettingsActivity.this, LoginActivity.class);
         finishAffinity();
         startActivity(newIntent);}

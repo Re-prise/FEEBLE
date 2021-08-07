@@ -105,7 +105,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096"
-        app:srcCompat="@drawable/jj_lin_dang_ni" />
+        app:srcCompat="@drawable/more_options_button" />
 
     <TextView
         android:id="@+id/txt_song_title"

@@ -140,69 +140,63 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ListView
-        android:layout_width="410dp"
-        android:layout_height="396dp"
+
+    <Button
+        android:id="@+id/btn_artist_playlist1"
+        android:layout_width="412dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#00000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtView_artist_ArtistName"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="@+id/txtView_artist_ArtistName"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <GridView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageButton
-                android:id="@+id/btnMore_artist"
-                android:layout_width="50dp"
-                android:layout_height="16dp"
-                android:layout_marginStart="347dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="11dp"
-                android:layout_marginBottom="18dp"
-                android:backgroundTint="#00FFFFFF"
-                android:contentDescription="@string/desc"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/more_options_button" />
+    <ImageButton
+        android:id="@+id/btnMore_artist"
+        android:layout_width="50dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="362dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="19dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_artist_playlist1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_artist_playlist1"
+        app:layout_constraintStart_toStartOf="@+id/btn_artist_playlist1"
+        app:layout_constraintTop_toTopOf="@+id/btn_artist_playlist1"
+        app:srcCompat="@drawable/more_options_button" />
 
-            <TextView
-                android:id="@+id/txtView_artist_AlbumName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="61dp"
-                android:layout_marginEnd="268dp"
-                android:layout_marginBottom="31dp"
-                android:text="@string/artist_album"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
+    <TextView
+        android:id="@+id/txtView_artist_AlbumName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="334dp"
+        android:text="@string/artist_album"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_artist_playlist1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_artist_playlist1"
+        app:layout_constraintStart_toStartOf="@+id/btn_artist_playlist1"
+        app:layout_constraintTop_toTopOf="@+id/btn_artist_playlist1"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/cover_artist_song1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/desc"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/jj_lin_dang_ni" />
-
-            <TextView
-                android:id="@+id/txtView_artist_Song1Duration"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="256dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="73dp"
-                android:layout_marginBottom="15dp"
-                android:text="@string/artist_song_duration"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btn_artist_playlist1"
-                android:layout_width="408dp"
-                android:layout_height="50dp"
-                android:backgroundTint="#00000000" />
-        </GridView>
-
-    </ListView>
+    <ImageView
+        android:id="@+id/cover_artist_song1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="358dp"
+        android:contentDescription="@string/desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_artist_playlist1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_artist_playlist1"
+        app:layout_constraintStart_toStartOf="@+id/btn_artist_playlist1"
+        app:layout_constraintTop_toTopOf="@+id/btn_artist_playlist1"
+        app:srcCompat="@drawable/jj_lin_dang_ni" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

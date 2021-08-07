@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.musicstream.Authenticaion;
 import com.example.musicstream.MainActivity;
 import com.example.musicstream.R;
 import com.example.musicstream.authentication.ClassUser;

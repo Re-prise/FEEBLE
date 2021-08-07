@@ -27,7 +27,6 @@ public class ArtistRecommendedActivity extends AppCompatActivity {
     public void bacKk (View view){finish();}
     public void globallyTravelToPlaylist1(View view){
         Intent newIntent = new Intent(ArtistRecommendedActivity.this, AlbumActivity1.class);
-        finish();
         startActivity(newIntent);
     }
 }

@@ -16,7 +16,7 @@ public class SongCollection2 extends AppCompatActivity {
                 4.2,
                 R.drawable.cover_wuli);
         Song bingtai = new Song(2,
-                "病態",
+                "病态",
                 "Joker Xue",
                 "https://p.scdn.co/mp3-preview/e80f93514ad3b589dc18765773b181004df88ebb?cid=2afe87a64b0042dabf51f37318616965",
                 4.66,

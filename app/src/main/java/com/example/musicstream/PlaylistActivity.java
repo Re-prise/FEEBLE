@@ -37,7 +37,6 @@ public class PlaylistActivity extends AppCompatActivity {
                 startActivity(j);
                 break;
             case R.id.btn_playlist_song3:
-                // i'm lazy, do nothing
                 Intent k = new Intent(PlaylistActivity.this, PlaySongActivity.class);
                 k.putExtra("songname1", "星辰大海");
                 startActivity(k);

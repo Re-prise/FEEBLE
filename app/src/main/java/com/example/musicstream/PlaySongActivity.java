@@ -58,18 +58,21 @@ public class PlaySongActivity extends AppCompatActivity {
         seekBar = findViewById(R.id.seekBar);
         shuffleList = Arrays.asList(songCollection2.playlistSongs);
         System.out.println(shuffleList);
-        //TODO: add a list at homepage in the future and link it to here
+
+
         Bundle songData = this.getIntent().getExtras();
         String nameTitle = songData.getString("songname1");
+        Log.d("show", "Retrieved title is: " + nameTitle);
         for (int i = 0; i < songCollection2.playlistSongs.length; i++){
+            Log.d("show", "Retrieved title is: " + songCollection2.playlistSongs[i].getTitle());
             if (songCollection2.playlistSongs[i].getTitle().equals(nameTitle)){
                 Log.d("show", "Retrieved Position is: " + i);
                 currentIndex = songCollection2.playlistSongs[i].getId()-1;
                 //return;
             }
         }
-        //TODO: add a list at homepage in the future and link it to her
-        //currentIndex = 0;
+
+
         Log.d("temasek", "Retrieved Position is: " + currentIndex);
 
         displaySongBasedOnIndex(currentIndex);

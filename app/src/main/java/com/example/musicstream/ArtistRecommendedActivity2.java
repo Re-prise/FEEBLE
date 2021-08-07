@@ -25,6 +25,8 @@ public class ArtistRecommendedActivity2 extends AppCompatActivity {
     //onClick from Back button to finish current Activity
     public void bacKkK (View view){finish();}
     public void walkToPlaylist(View view){
-        startActivity(new Intent(ArtistRecommendedActivity2.this,PlaySongActivity4.class));
+        //startActivity(new Intent(ArtistRecommendedActivity2.this,PlaySongActivity4.class));
+        Intent newIntent = new Intent(ArtistRecommendedActivity2.this, PlaySongActivity4.class);
+        startActivity(newIntent);
     }
 }

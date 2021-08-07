@@ -65,7 +65,7 @@ public class AlbumActivity1 extends AppCompatActivity {
             case R.id.btn_playlist_song6:
                 // i'm lazy, do nothing
                 Intent o = new Intent(AlbumActivity1.this, PlaySongActivity5.class);
-                o.putExtra("songname5", "握不住的他");
+                o.putExtra("songname5", "握不紧的他");
                 startActivity(o);
                 break;
         }

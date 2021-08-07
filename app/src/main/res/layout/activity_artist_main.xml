@@ -132,7 +132,7 @@
         android:layout_width="412dp"
         android:layout_height="60dp"
         android:layout_marginBottom="436dp"
-        android:background="@color/purple_light"
+        android:background="@color/purpleish"
         android:fontFamily="@font/theoneilluseveryoften"
         android:text="@string/artist_artist"
         android:textAlignment="center"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_dark">#9000FF</color><color name="purple_light">#CC8CFE</color>
+    <color name="purple_dark">#9000FF</color><color name="purple_light">#CC8CFE</color><color name="purpleish">#5905A1</color>
     <color name="pinkish_purple">#FE8CF6</color><color name="pink"> #FF94C6 </color>
     <color name="blue_light">#6BB0FF</color><color name="blue_lightest">#97C4F6</color><color name="dark_blue">#0000FF</color>
     <color name="black">#FF000000</color>

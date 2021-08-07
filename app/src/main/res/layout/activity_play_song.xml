@@ -104,7 +104,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096"
+        app:layout_constraintVertical_bias="0.163"
         app:srcCompat="@drawable/more_options_button" />
 
     <TextView
@@ -112,6 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
+        android:layout_marginTop="525dp"
         android:layout_marginEnd="152dp"
         android:layout_marginBottom="256dp"
         android:contentDescription="@string/desc"
@@ -124,14 +125,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_artist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="184dp"
+        android:layout_marginTop="19dp"
         android:layout_marginEnd="185dp"
         android:layout_marginBottom="181dp"
         android:fontFamily="@font/theoneilluseveryoften"
@@ -142,8 +143,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_song_title"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/btnBack_play_song"
@@ -168,7 +169,8 @@
         android:id="@+id/play_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="47dp"
+        android:layout_marginTop="254dp"
+        android:layout_marginEnd="150dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
         android:onClick="playOrPauseMusic"
@@ -176,16 +178,18 @@
         android:src="@drawable/play_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
+        app:layout_constraintVertical_bias="0.769" />
 
     <ImageButton
         android:id="@+id/previous_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="47dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="254dp"
+        android:layout_marginEnd="87dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
         android:onClick="playPrev"
@@ -194,16 +198,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/play_button"
-        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.841" />
+        app:layout_constraintVertical_bias="0.768" />
 
     <ImageButton
         android:id="@+id/next_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="47dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="253dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
         android:onClick="playNext"
@@ -211,16 +217,18 @@
         android:src="@drawable/skip_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/play_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.842" />
+        app:layout_constraintVertical_bias="0.768" />
 
     <ImageButton
         android:id="@+id/shuffle_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="109dp"
+        android:layout_marginTop="127dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
         android:onClick="shuffleSong"
@@ -233,13 +241,14 @@
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.733" />
+        app:layout_constraintVertical_bias="0.571" />
 
     <ImageButton
         android:id="@+id/loop_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="205dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="126dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
         android:onClick="loopSong"
@@ -249,10 +258,10 @@
         android:src="@drawable/repeat_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844" />
+        app:layout_constraintVertical_bias="0.57" />
 
     <TextView
         android:id="@+id/txt_artist_duration_start"

@@ -186,7 +186,7 @@
         android:id="@+id/textView"
         android:layout_width="411dp"
         android:layout_height="48dp"
-        android:background="@color/purple_light"
+        android:background="@color/purpleish"
         android:fontFamily="@font/theoneilluseveryoften"
         android:text="@string/artist_album"
         android:textAlignment="center"

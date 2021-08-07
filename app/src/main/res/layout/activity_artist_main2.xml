@@ -129,7 +129,7 @@
         android:id="@+id/txtView_artist_ArtistName"
         android:layout_width="412dp"
         android:layout_height="60dp"
-        android:background="@color/purple_light"
+        android:background="@color/purpleish"
         android:fontFamily="@font/theoneilluseveryoften"
         android:text="@string/jokerxue"
         android:textAlignment="center"

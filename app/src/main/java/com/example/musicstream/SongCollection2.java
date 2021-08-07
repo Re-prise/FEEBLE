@@ -43,10 +43,10 @@ public class SongCollection2 extends AppCompatActivity {
         Intent intent = new Intent(this, PlaySongActivity.class);
         intent.putExtra("index", index);
         startActivity(intent);}
+
     public void handleSelection(View myView){
         String resourceId = getResources().getResourceEntryName(myView.getId());
-        SongCollection2 CAI = new SongCollection2();
-        int currentArrayIndex = CAI.SearchSongById(Integer.parseInt(resourceId));
+        int currentArrayIndex = SearchSongById(Integer.parseInt(resourceId));
         //tester//Log.d("temasek","The index in the array for this song is :" + currentArrayIndex);
         sendDataToActivity(currentArrayIndex);}
 

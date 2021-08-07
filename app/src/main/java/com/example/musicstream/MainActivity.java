@@ -29,18 +29,17 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         setContentView(R.layout.activity_main);
     }
-
     public void goToSettings(View view){startActivity(new Intent(MainActivity.this, SettingsActivity.class)); }
 
     public void goToArtist(View view) {
         startActivity(new Intent(MainActivity.this, ArtistRecommendedActivity.class));
     }
-
     public void goToCollections(View view) {
         startActivity(new Intent(MainActivity.this, CollectionsActivity.class));
     }
+    public void goToPlaylist(View view){startActivity(new Intent(MainActivity.this, PlaylistActivity.class));}
 }
-
+//       int isClicked = 0;
 //    public void favourite(View View) {
 //        if (isClicked == 0) {
 //            favouritesicon.setImageResource(R.drawable.ic_hearts_filled);

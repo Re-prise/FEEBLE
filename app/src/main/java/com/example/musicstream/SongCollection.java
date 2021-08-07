@@ -88,15 +88,13 @@ public class SongCollection extends AppCompatActivity {
         Intent intent = new Intent(this, PlaySongActivity.class);
         intent.putExtra("index", index);
         startActivity(intent);}
+
     public void handleSelection(View myView){
         String resourceId = getResources().getResourceEntryName(myView.getId());
-        SongCollection CAI = new SongCollection();
-        int currentArrayIndex = CAI.SearchSongById(Integer.parseInt(resourceId));
+        int currentArrayIndex = SearchSongById(Integer.parseInt(resourceId));
         Log.d("temasek","The index in the array for this song is :" + currentArrayIndex);
         sendDataToActivity(currentArrayIndex);}
 
-    //TODO: CURRENT GET NEXT SONG is not randomised and hardstuck with default order
-    //TODO: need make currentsong always first of randomised list
     public int getNextSong(int currentSongIndex){
         Log.d("temasek","The current index is :" + currentSongIndex);
         Log.d("temasek","The index in the arris :" + songs.length);

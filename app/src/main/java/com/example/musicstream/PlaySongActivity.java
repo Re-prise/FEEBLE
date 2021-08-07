@@ -25,7 +25,7 @@ public class PlaySongActivity extends AppCompatActivity {
     private String artiste = "";
     private String fileLink = "";
     private int drawable;
-    private int currentIndex = -1;
+    private int currentIndex;
     private double songLength;
 
     private MediaPlayer songplayer = new MediaPlayer();
@@ -37,6 +37,7 @@ public class PlaySongActivity extends AppCompatActivity {
     Boolean repeatFlag;
     Boolean shuffleFlag;
     List<Song> shuffleList;
+<<<<<<< Updated upstream
 
 
     int convertedTime;
@@ -45,6 +46,8 @@ public class PlaySongActivity extends AppCompatActivity {
     private Runnable runnable;
 
 
+=======
+>>>>>>> Stashed changes
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,11 +63,17 @@ public class PlaySongActivity extends AppCompatActivity {
         seekBar = findViewById(R.id.seekBar);
         shuffleList = Arrays.asList(songCollection.playlistSongs);
         System.out.println(shuffleList);
+<<<<<<< Updated upstream
         ImageButton play_button = findViewById(R.id.play_button);
         //TODO: add a list at homepage in the future and link it to here
         //Bundle songData = this.getIntent().getExtras();
         //currentIndex = songData.getInt("index");
         currentIndex = 1;
+=======
+        //TODO: add a list at homepage in the future and link it to her
+        currentIndex = 0;
+        Log.d("temasek", "Retrieved Position is: " + currentIndex);
+>>>>>>> Stashed changes
         displaySongBasedOnIndex(currentIndex);
     }
 
@@ -157,6 +166,7 @@ public class PlaySongActivity extends AppCompatActivity {
             songplayer.setDataSource(songUrl);
             songplayer.prepare();
             songplayer.start();
+<<<<<<< Updated upstream
 
 
             this.runOnUiThread(runnable = new Runnable() {
@@ -199,6 +209,9 @@ public class PlaySongActivity extends AppCompatActivity {
             //TODO: for PlaySongActivity1 only
             playsNextSongWhenMusicEnds();
 
+=======
+            gracefullyStopsWhenMusicEnds();
+>>>>>>> Stashed changes
             play_button.setImageResource(R.drawable.pause_button);
             setTitle(title);
         } catch (IOException e) {

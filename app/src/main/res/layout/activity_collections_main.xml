@@ -146,6 +146,7 @@
         android:background="@color/purple_light"
         android:fontFamily="@font/theoneilluseveryoften"
         android:text="@string/favouritedSongs"
+        android:textAlignment="viewStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

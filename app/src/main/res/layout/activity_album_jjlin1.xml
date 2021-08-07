@@ -51,14 +51,15 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         android:src="@drawable/collection_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.997"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_playlist_song1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/cover_palylist_song"
@@ -231,15 +232,15 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
-        android:contentDescription="1001"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         android:src="@drawable/collection_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.997"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imgview_playlist_song2"
@@ -352,6 +353,7 @@
         android:id="@+id/imgview_playlist_song3"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="@string/desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -364,6 +366,7 @@
         android:id="@+id/imgview_playlist_song"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="@string/desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -376,6 +379,7 @@
         android:id="@+id/imgview_playlist_song4"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="@string/desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -388,6 +392,7 @@
         android:id="@+id/imgview_playlist_song5"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="@string/desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -400,6 +405,7 @@
         android:id="@+id/imgview_playlist_song6"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="@string/desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -561,14 +567,16 @@
         android:id="@+id/imageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginTop="2dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtn_playlist_favourite2"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/collection_icon" />
 
     <ImageButton
@@ -577,13 +585,14 @@
         android:layout_height="50dp"
         android:layout_marginStart="360dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/collection_icon" />
 
     <ImageButton
@@ -591,13 +600,14 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song6"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.946"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/collection_icon" />
 
     <ImageButton
@@ -606,13 +616,14 @@
         android:layout_height="50dp"
         android:layout_marginStart="360dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song5"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintVertical_bias="0.006"
         app:srcCompat="@drawable/collection_icon" />
 
     <ImageButton
@@ -620,13 +631,14 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/desc"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintHorizontal_bias="0.997"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/collection_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

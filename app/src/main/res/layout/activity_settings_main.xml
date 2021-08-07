@@ -46,7 +46,11 @@
         android:scaleY="0.9"
         android:src="@drawable/ic_settings_filled"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/toolbar_button_home"
@@ -59,7 +63,11 @@
         android:scaleY="1"
         android:src="@drawable/home_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/toolbar_button_collection" />
+        app:layout_constraintEnd_toStartOf="@+id/toolbar_button_settings"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/toolbar_button_collection"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/toolbar_button_collection"
@@ -74,7 +82,11 @@
         android:scaleY="0.5"
         android:src="@drawable/collection_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/btnBack_Settings"
@@ -99,15 +111,17 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/settings_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btnBack_Settings"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/settings_profile"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="410dp"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"
         android:background="@color/purple_dark"
         android:fontFamily="@font/theoneilluseveryoften"
         android:onClick="moveToProfile"
@@ -118,10 +132,12 @@
         app:iconPadding="2dp"
         app:iconSize="45dp"
         app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061" />
 
     <Button
         android:id="@+id/settings_theme"
@@ -170,20 +186,28 @@
         android:text="@string/logout"
         app:layout_constraintBottom_toTopOf="@+id/toolbar_button_home"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/about_header"
         style="@style/Widget.AppCompat.TextView"
         android:layout_width="409dp"
         android:layout_height="50dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/theoneilluseveryoften"
         android:text="@string/about"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settings_dark_mode" />
+        app:layout_constraintTop_toBottomOf="@+id/settings_dark_mode"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/version_header"
@@ -191,24 +215,30 @@
         android:layout_height="22dp"
         android:layout_marginTop="2dp"
         android:text="@string/version_header"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about_header" />
+        app:layout_constraintTop_toBottomOf="@+id/about_header"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/version_type"
         android:layout_width="412dp"
         android:layout_height="23dp"
         android:text="@string/version_num"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/version_header" />
+        app:layout_constraintTop_toBottomOf="@+id/version_header"
+        app:layout_constraintVertical_bias="0.0" />
 
     <RadioButton
         android:id="@+id/radioButton"

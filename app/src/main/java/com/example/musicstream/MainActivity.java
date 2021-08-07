@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         //String resourceId = getResources().getResourceEntryName(myView.getId());
         //Tester//Log.d("temasek","The id of the pressed Image Button is :" + resourceId);
         Intent newIntent = new Intent(MainActivity.this, PlaySongActivity2.class);
-        finish();
         startActivity(newIntent);
         //startActivity(new Intent(MainActivity.this, PlaySongActivity2.class));
         setContentView(R.layout.activity_play_song);

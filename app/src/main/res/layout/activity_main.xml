@@ -281,28 +281,29 @@
         android:scaleX="1.25"
         android:scaleY="1.25"
         android:src="@drawable/artist_cover_jjlin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists" />
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/artist_recommended_image2"
         style="@android:style/Widget.DeviceDefault.Light.ImageButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="28dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/desc"
         android:scaleType="fitXY"
         android:scaleX="1.25"
         android:scaleY="1.25"
         android:src="@drawable/ic_cover_artist_jokerx"
-        app:layout_constraintBottom_toBottomOf="@+id/artist_recommeded_button2"
-        app:layout_constraintEnd_toEndOf="@+id/artist_recommeded_button2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/artist_recommeded_button2"
-        app:layout_constraintTop_toTopOf="@+id/artist_recommeded_button2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.324"
+        app:layout_constraintStart_toStartOf="@+id/artist_recommended_image"
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -336,32 +337,31 @@
         android:id="@+id/artist_recommeded_button"
         android:layout_width="103dp"
         android:layout_height="127dp"
-        android:layout_marginTop="350dp"
         android:layout_marginEnd="350dp"
         android:backgroundTint="#00FFFFFF"
         android:onClick="goToArtist"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/artist_recommeded_button2"
         android:layout_width="103dp"
         android:layout_height="127dp"
         android:layout_marginStart="350dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="350dp"
         android:backgroundTint="#00FFFFFF"
         android:onClick="goToArtist2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintTop_toBottomOf="@+id/Header_Main_Artists"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/recommend_song_name"

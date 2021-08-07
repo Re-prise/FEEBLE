@@ -44,14 +44,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.642" />
+        app:layout_constraintVertical_bias="0.644" />
 
     <ImageButton
         android:id="@+id/imgbtn_playlist_favourite2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#00FFFFFF"
-        android:contentDescription="1002"
         android:scaleType="centerCrop"
         android:src="@drawable/collection_icon"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -334,7 +333,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885" />
+        app:layout_constraintVertical_bias="0.888" />
 
     <Button
         android:id="@+id/btn_playlist_song5"
@@ -413,19 +412,16 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="281dp"
         android:layout_marginBottom="20dp"
         android:text="只对你有感觉"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song3"
-        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song3"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.702" />
 
     <TextView
         android:id="@+id/textView2"
@@ -447,61 +443,60 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginEnd="282dp"
-        android:layout_marginBottom="23dp"
         android:text="一眼万年"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song5"
-        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song5"
-        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song5"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song5" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.804" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="49dp"
-        android:layout_marginEnd="303dp"
         android:layout_marginBottom="23dp"
         android:text="保护色"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song4"
-        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song4"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song4" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginEnd="263dp"
-        android:layout_marginBottom="23dp"
         android:text="握不住的他"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song6"
-        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song6"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song6" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
 
     <TextView
         android:id="@+id/txt_album_artist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="319dp"
         android:layout_marginBottom="1dp"
         android:text="@string/artist_artist"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song3"
-        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song3"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song3" />
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.716" />
 
     <TextView
         android:id="@+id/txt_album_artist2"
@@ -537,42 +532,43 @@
         android:id="@+id/txt_album_artist4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="324dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="50dp"
         android:text="@string/artist_artist"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song4"
-        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song4"
-        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song4"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song4" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889" />
 
     <TextView
         android:id="@+id/txt_album_artist5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="31dp"
         android:layout_marginEnd="322dp"
         android:text="@string/artist_artist"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song6"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song6"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song6"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song6" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.941" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="360dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song3"
-        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song3"
-        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song3"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.705"
         app:srcCompat="@drawable/collection_icon" />
 
     <ImageButton
@@ -580,28 +576,28 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="360dp"
-        android:layout_marginEnd="2dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song4"
-        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song4"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885"
         app:srcCompat="@drawable/collection_icon" />
 
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="360dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="3dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song6"
-        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song6"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.946"
         app:srcCompat="@drawable/collection_icon" />
 
     <ImageButton
@@ -609,29 +605,28 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="360dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="2dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song5"
-        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_playlist_song5"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825"
         app:srcCompat="@drawable/collection_icon" />
 
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="360dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="2dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_playlist_song"
-        app:layout_constraintEnd_toEndOf="@+id/btn_playlist_song"
-        app:layout_constraintStart_toStartOf="@+id/btn_playlist_song"
-        app:layout_constraintTop_toTopOf="@+id/btn_playlist_song"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765"
         app:srcCompat="@drawable/collection_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

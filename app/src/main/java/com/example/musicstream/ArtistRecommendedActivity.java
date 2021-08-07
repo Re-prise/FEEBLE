@@ -2,6 +2,7 @@ package com.example.musicstream;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -11,6 +12,7 @@ public class ArtistRecommendedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("HUBS","Workingsssss");
         //Sets current layout from res.layouts
         setContentView(R.layout.activity_artist_main);
         getSupportActionBar().hide();
@@ -25,5 +27,5 @@ public class ArtistRecommendedActivity extends AppCompatActivity {
     public void globallyTravelToSettings(View view){startActivity(new Intent(ArtistRecommendedActivity.this,SettingsActivity.class));}
     //onClick from Back button to finish current Activity
     public void bacKk (View view){finish();}
-    public void globallyTravelToPlaylist1(View view){startActivity(new Intent(ArtistRecommendedActivity.this, PlaySongActivity4.class));}
+    public void globallyTravelToPlaylist1(View view){startActivity(new Intent(ArtistRecommendedActivity.this, AlbumActivity1.class));Log.d("HUBS","Workingslkdf jgh");}
 }

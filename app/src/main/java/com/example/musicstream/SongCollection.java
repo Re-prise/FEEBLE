@@ -6,6 +6,9 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class SongCollection extends AppCompatActivity {
     Song songs[] = new Song[8];
     public SongCollection() {
@@ -104,4 +107,5 @@ public class SongCollection extends AppCompatActivity {
     public int getPrevSong(int currentSongIndex){
         if(currentSongIndex <=0){return currentSongIndex;}
         else{return currentSongIndex-1;}}
+
 }

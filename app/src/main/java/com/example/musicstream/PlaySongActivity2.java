@@ -60,16 +60,6 @@ public class PlaySongActivity2 extends AppCompatActivity {
         shuffleFlag = false;
 
 
-
-        shuffleList = Arrays.asList(songCollection.songs);
-        for (int i = 0; i < shuffleList.size(); i++){
-            Log.d("songs", "arr: " + shuffleList.get(i).getId());
-        }
-        for (int i = 0; i < shuffleList.size(); i++){
-            Log.d("songscollec", "arr: " + songCollection.songs[i].getId());
-        }
-
-
         ImageButton play_button = findViewById(R.id.play_button);
         //TODO: add a list at homepage in the future and link it to here
         //Bundle songData = this.getIntent().getExtras();
@@ -89,11 +79,11 @@ public class PlaySongActivity2 extends AppCompatActivity {
         Log.d("show", "show num1: " + words[0]);
         Log.d("show", "show num2: " + words[1]);
         int minutes, seconds;
-//
+
         minutes = Integer.parseInt(words[0]) * 60;
         seconds = Integer.parseInt(words[1]) + minutes;
         convertedTime = seconds;
-//
+
         Log.d("show", "Minutes = " + minutes
                 + ", Seconds = " + seconds);
     }
@@ -102,8 +92,16 @@ public class PlaySongActivity2 extends AppCompatActivity {
     //Runnable songbar = () -> Log.d("temasek","running");//
     public void displaySongBasedOnIndex(int currentIndex) {
         SongCollection SC = new SongCollection();
+        //Song song;
+//        if (shuffleFlag){
+//            song = getRandoSong(currentIndex);
+//        }
+//        else{
+//            song = SC.getCurrentSong(currentIndex);
+//        }
+
         Song song = SC.getCurrentSong(currentIndex);
-        String title = song.getTitle();
+        title = song.getTitle();
         String artiste = song.getArtiste();
         fileLink = song.getFileLink();
         drawable = song.getDrawable();
@@ -118,8 +116,6 @@ public class PlaySongActivity2 extends AppCompatActivity {
         txtDuration.setText(Double.toString(songLength));
 
         String doubleToTid = Double.toString(songLength);
-
-
         doubleToTid = doubleToTid.replace(".",":");
         ConvertToSecs(doubleToTid);
         seekBar.setMax(convertedTime);
@@ -131,7 +127,6 @@ public class PlaySongActivity2 extends AppCompatActivity {
 
 
     protected void onStop() {
-        Log.d("music_tid", "Perts");
         super.onStop();
         if(songplayer != null) {
             if (songplayer.isPlaying()) {
@@ -147,17 +142,8 @@ public class PlaySongActivity2 extends AppCompatActivity {
         }
     }
 
-
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//        songplayer.stop();
-//        finish();
-//    }
-
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        Log.d("music_tid", "Blyat");
         if (keyCode == KeyEvent.KEYCODE_BACK
                 && event.getRepeatCount() == 0) {
 
@@ -210,10 +196,10 @@ public class PlaySongActivity2 extends AppCompatActivity {
 
 
             //TODO: for PlaySongActivity2 only
-            //gracefullyStopsWhenMusicEnds();
+            gracefullyStopsWhenMusicEnds();
 
-            //TODO: for PlaySongActivity1 only
-            playsNextSongWhenMusicEnds();
+//            //TODO: for PlaySongActivity1 only
+//            playsNextSongWhenMusicEnds();
 
             play_button.setImageResource(R.drawable.pause_button);
             setTitle(title);
@@ -224,8 +210,8 @@ public class PlaySongActivity2 extends AppCompatActivity {
     public void playPrev (View view){
         currentIndex = songCollection.getPrevSong(currentIndex);
         Log.d("temasek","After playPrevious, the index is now :" + currentIndex);
-        displaySongBasedOnIndex(currentIndex);
-        playSong(fileLink);
+//        displaySongBasedOnIndex(currentIndex);
+//        playSong(fileLink);
     }
     public void playOrPauseMusic(View view){
         if (!songplayer.isPlaying()) {
@@ -240,17 +226,18 @@ public class PlaySongActivity2 extends AppCompatActivity {
             play_button.setImageResource(R.drawable.play_arrow); }
     }
     public void playNext (View view) {
-        if(shuffleFlag){
-            Log.d("shuffle1", "activated");
-            currentIndex = randomCollection.getNextSong(currentIndex);
-        }
-        else{
-            Log.d("shuffle1", "deactivated");
-            currentIndex = songCollection.getNextSong(currentIndex);
-        }
+//        if(shuffleFlag){
+//            Log.d("shuffle1", "activated");
+//            currentIndex = getRandomSong(currentIndex);
+//            reshuffleSong();
+//        }
+//        else{
+//            Log.d("shuffle1", "deactivated");
+//            currentIndex = songCollection.getNextSong(currentIndex);
+//        }
         Log.d("temasek","After playNexy, the index is now :" + currentIndex);
-        displaySongBasedOnIndex(currentIndex);
-        playSong(fileLink);
+//        displaySongBasedOnIndex(currentIndex);
+//        playSong(fileLink);
     }
     @Override
     public void onBackPressed(){
@@ -287,31 +274,60 @@ public class PlaySongActivity2 extends AppCompatActivity {
         }
         repeatFlag = !repeatFlag;
     }
+
+    //activate shuffling function
     public void shuffleSong(View view) {
         if (shuffleFlag){
             shufflebtn.setImageResource(R.drawable.shuffle_icon);
             songCollection = new SongCollection();
         } else {
             shufflebtn.setImageResource(R.drawable.shuffle_icon_filled);
+            shuffleList = Arrays.asList(randomCollection.songs);
             Collections.shuffle(Arrays.asList(randomCollection.songs));
 
-            for (int s = 0; s < Arrays.asList(randomCollection.songs).size(); s++){
-                Log.d("shuffle1", "arr: " + randomCollection.songs[s].getTitle());
+            for (int s = 0; s < shuffleList.size(); s++){
+                Log.d("shuffle1", "arr: " + shuffleList.get(s).getTitle());
 
-                //TODO: try rearrange currentIndexSong that it is ALWAYS first song in randomised list
+                if (title == shuffleList.get(s).getTitle()){
+                    shuffleList.toArray(randomCollection.songs);
+                }
             }
 
         }
         shuffleFlag = !shuffleFlag;
     }
 
-    //TODO: CURRENT GET NEXT SONG is not randomised and hardstuck with default order
-    public int getRandomSong(int currentSongIndex){
-        Log.d("temasek","The current index is :" + currentSongIndex);
-        Log.d("temasek","The index in the arris :" + randomCollection.songs.length);
-        if (currentSongIndex >= randomCollection.songs.length-1){return currentSongIndex;}
-        else{return currentSongIndex + 1;}
-    }
+//    //initiate song on list
+//    public Song getRandoSong(int currentSongId) {
+//
+//        return randomCollection.songs[currentSongId];
+//    }
+//
+//    //everytime when song ends, the playlist will reshuffle again
+//    public void reshuffleSong() {
+//        shuffleList = Arrays.asList(randomCollection.songs);
+//        Collections.shuffle(shuffleList);
+//
+//        for (int s = 0; s < shuffleList.size(); s++){
+//            Log.d("shuffle1", "arr: " + shuffleList.get(s).getTitle());
+//
+//            if (title == shuffleList.get(s).getTitle()){
+//                Log.d("shuffle1", "located! song position is " + s);
+//                //List<~> al = new ArrayList<Integer>(Arrays.asList(1, 3, 5, 6));
+//                // currentIndex = songCollection.removeSong(currentIndex);
+//                shuffleList.toArray(songCollection.songs);
+////                    Arrays.asList(randomCollection.songs).add(1, randomCollection.songs[s]);
+//            }
+//        }
+//    }
+//
+//    //for playing next and previous shuffling song
+//    public int getRandomSong(int currentSongIndex){
+//        Log.d("temasek","The current index is :" + currentSongIndex);
+//        Log.d("temasek","The index in the arris :" + randomCollection.songs.length);
+//        if (currentSongIndex >= randomCollection.songs.length-1){return currentSongIndex;}
+//        else{return currentSongIndex + 1;}
+//    }
 
     //onClick function for Toolbar + back button
     //onClick from Toolbar(home) to Main Activity

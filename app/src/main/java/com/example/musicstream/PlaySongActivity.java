@@ -19,10 +19,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-
-//TODO: for playlist songs
-//TODO: add seekbar for songs
-
 public class PlaySongActivity extends AppCompatActivity {
     private String title = "";
     private String artiste = "";
@@ -33,7 +29,7 @@ public class PlaySongActivity extends AppCompatActivity {
 
     private MediaPlayer songplayer = new MediaPlayer();
     ImageButton play_button;
-    SongCollection songCollection = new SongCollection();
+    SongCollection2 songCollection = new SongCollection2();
     ImageButton loopbtn;
     ImageButton shufflebtn;
     Boolean repeatFlag;
@@ -51,7 +47,7 @@ public class PlaySongActivity extends AppCompatActivity {
         play_button = (ImageButton) findViewById(R.id.play_button);
         repeatFlag = false;
         shuffleFlag = false;
-        shuffleList = Arrays.asList(songCollection.songs);
+        shuffleList = Arrays.asList(songCollection.playlistSongs);
         System.out.println(shuffleList);
         ImageButton play_button = findViewById(R.id.play_button);
         //TODO: add a list at homepage in the future and link it to here
@@ -63,7 +59,7 @@ public class PlaySongActivity extends AppCompatActivity {
         Log.d("temasek", "My file link is: " + fileLink);}
 
     public void displaySongBasedOnIndex(int currentIndex) {
-        SongCollection SC = new SongCollection();
+        SongCollection2 SC = new SongCollection2();
         Song song = SC.getCurrentSong(currentIndex);
         String title = song.getTitle();
         String artiste = song.getArtiste();
@@ -157,7 +153,7 @@ public class PlaySongActivity extends AppCompatActivity {
     public void shuffleSong(View view) {
         if (shuffleFlag){
             shufflebtn.setImageResource(R.drawable.shuffle_icon);
-            songCollection = new SongCollection();
+            songCollection = new SongCollection2();
         } else {
             shufflebtn.setImageResource(R.drawable.shuffle_icon_filled);
 
@@ -166,7 +162,7 @@ public class PlaySongActivity extends AppCompatActivity {
             Collections.shuffle(shuffleList);
             for (int i = 0; i < shuffleList.size(); i++) {
                 //tester//Log.d("shuffle", shuffleList.get(i).getTitle());
-                shuffleList.toArray(songCollection.songs);
+                shuffleList.toArray(songCollection.playlistSongs);
             }
         }
         shuffleFlag = !shuffleFlag;

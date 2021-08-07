@@ -17,11 +17,11 @@ public class SongItem extends AppCompatActivity {
     int isClicked = 0;
 
 
-    public void travelToSong(View myView) {
+    public void travelToSong(View View) {
         //replace with button stuff
     }
 
-    public void favourite(View myView) {
+    public void favourite(View View) {
         if (isClicked == 0) {
             favouritesicon.setImageResource(R.drawable.ic_hearts_filled);
             Toast.makeText(this, "Added to favourites", Toast.LENGTH_SHORT).show();

@@ -39,7 +39,6 @@ public class PlaySongActivity extends AppCompatActivity {
     List<Song> shuffleList;
     int convertedTime;
     SeekBar seekBar;
-    //TODO: Handler is deprecated, music wont play, 'some input files use or override a deprecated API.
     private Handler mHandler = new Handler();
     private Runnable runnable;
 

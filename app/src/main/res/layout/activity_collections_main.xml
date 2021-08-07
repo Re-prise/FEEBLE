@@ -119,8 +119,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13"
+        app:layout_constraintTop_toBottomOf="@+id/txt_collections_playlist"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/playlist_cover_img" />
 
     <ImageView
@@ -134,8 +134,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13"
+        app:layout_constraintTop_toBottomOf="@+id/txt_collections_playlist"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/playlist_cover_img" />
 
     <TextView
@@ -199,6 +199,7 @@
         android:id="@+id/txt_collections_artist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
         android:fontFamily="@font/theoneilluseveryoften"
         android:text="@string/collections_favourited_artist"
         android:textColor="@color/white"
@@ -207,8 +208,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.387" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_collections_songName"
+        app:layout_constraintVertical_bias="0.001" />
 
     <ImageButton
         android:id="@+id/imgbtn_collections_back"
